@@ -1,0 +1,74 @@
+.phpb-wrap { padding: 20px; background: #eef1f7; display: none; }
+.phpb-wrap--visible { display: block; }
+
+.phpb-grid {
+  display: grid;
+  grid-template-columns: 1fr 260px;
+  gap: 16px;
+  align-items: start;
+}
+
+.phpb-balance-callout {
+  background: #FCEBEB;
+  border: 0.5px solid #F09595;
+  border-radius: 10px;
+  padding: 16px 18px;
+  margin-bottom: 14px;
+}
+.phpb-balance-callout--ok { background: #E1F5EE; border-color: #5DCAA5; }
+.phpb-balance-callout__label { font-size: 11px; color: #791F1F; text-transform: uppercase; letter-spacing: 0.05em; font-weight: 500; margin-bottom: 4px; }
+.phpb-balance-callout--ok .phpb-balance-callout__label { color: #085041; }
+.phpb-balance-callout__amount { font-size: 32px; font-weight: 500; color: #501313; line-height: 1.1; }
+.phpb-balance-callout--ok .phpb-balance-callout__amount { color: #04342C; }
+.phpb-balance-callout__due { font-size: 12px; color: #A32D2D; margin-top: 4px; }
+.phpb-balance-callout--ok .phpb-balance-callout__due { color: #0F6E56; }
+
+.phpb-card { background: #ffffff; border-radius: 12px; border: 0.5px solid rgba(0,0,0,0.1); overflow: hidden; margin-bottom: 14px; }
+.phpb-card:last-child { margin-bottom: 0; }
+.phpb-card--sidebar { padding: 14px 16px; }
+
+.phpb-card__head { padding: 12px 16px; border-bottom: 0.5px solid rgba(0,0,0,0.1); display: flex; align-items: center; justify-content: space-between; background: #f4f6fa; }
+.phpb-card__title { font-size: 13px; font-weight: 500; color: #1a1d23; margin-bottom: 10px; padding-bottom: 8px; border-bottom: 0.5px solid rgba(0,0,0,0.08); }
+.phpb-card__title--sm { font-size: 12px; }
+.phpb-api-tag { font-size: 10px; padding: 2px 7px; border-radius: 3px; background: #E6F1FB; color: #0C447C; font-weight: 500; }
+
+.phpb-table-wrap { overflow-x: auto; -webkit-overflow-scrolling: touch; }
+.phpb-table { width: 100%; border-collapse: collapse; font-size: 12px; table-layout: fixed; }
+.phpb-table thead th { text-align: left; font-size: 10px; font-weight: 500; color: #6b7280; text-transform: uppercase; letter-spacing: 0.04em; padding: 9px 14px; background: #f4f6fa; border-bottom: 0.5px solid rgba(0,0,0,0.1); }
+.phpb-table tbody td { padding: 10px 14px; border-bottom: 0.5px solid rgba(0,0,0,0.06); overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.phpb-table tbody tr:last-child td { border-bottom: none; }
+.phpb-table tbody tr:hover td { background: #f4f6fa; }
+.phpb-tx-credit { color: #3B6D11; font-weight: 500; }
+.phpb-tx-debit  { color: #1a1d23; }
+.phpb-tx-overdue { color: #A32D2D; font-weight: 500; }
+.phpb-badge { display: inline-block; font-size: 10px; padding: 2px 7px; border-radius: 3px; font-weight: 500; }
+.phpb-badge--paid    { background: #EAF3DE; color: #3B6D11; }
+.phpb-badge--overdue { background: #FCEBEB; color: #791F1F; }
+.phpb-badge--pending { background: #FAEEDA; color: #633806; }
+
+.phpb-sched-row { display: flex; justify-content: space-between; font-size: 12px; padding: 6px 0; border-bottom: 0.5px solid rgba(0,0,0,0.06); }
+.phpb-sched-row:last-child { border-bottom: none; }
+.phpb-sched-label { color: #6b7280; }
+
+.phpb-progress-bar { height: 6px; background: #f4f6fa; border-radius: 3px; overflow: hidden; margin: 10px 0 5px; }
+.phpb-progress-bar__fill { height: 100%; background: #1D9E75; border-radius: 3px; transition: width 0.4s; }
+.phpb-progress-label { font-size: 11px; color: #3B6D11; }
+
+.phpb-pay-note { font-size: 12px; color: #6b7280; margin-bottom: 10px; line-height: 1.5; }
+.phpb-pay-btn { width: 100%; font-size: 13px; padding: 9px; border-radius: 8px; border: none; background: #185FA5; color: #ffffff; cursor: pointer; font-family: inherit; }
+.phpb-pay-btn:hover { background: #0C447C; }
+.phpb-pay-confirm { display: none; margin-top: 10px; font-size: 11px; color: #3B6D11; background: #EAF3DE; border-radius: 6px; padding: 8px 10px; line-height: 1.55; }
+.phpb-pay-confirm--visible { display: block; }
+
+@media (max-width: 900px) {
+  .phpb-grid { grid-template-columns: 1fr; }
+  .phpb-sidebar { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+  .phpb-card--sidebar { margin-bottom: 0; }
+}
+
+@media (max-width: 600px) {
+  .phpb-wrap { padding: 12px; }
+  .phpb-sidebar { grid-template-columns: 1fr; }
+  .phpb-table thead th:nth-child(4),
+  .phpb-table tbody td:nth-child(4) { display: none; }
+}

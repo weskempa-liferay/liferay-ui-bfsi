@@ -1,0 +1,46 @@
+.phch-hero {
+  background: #042C53;
+  color: #ffffff;
+  padding: 18px 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+}
+.phch-hero__name {
+  font-size: 17px;
+  font-weight: 500;
+  margin-bottom: 3px;
+}
+.phch-hero__meta {
+  font-size: 12px;
+  opacity: 0.6;
+  margin-bottom: 3px;
+}
+.phch-hero__note {
+  font-size: 11px;
+  opacity: 0.5;
+}
+.phch-hero__stat {
+  text-align: right;
+  flex-shrink: 0;
+}
+.phch-hero__stat-label {
+  font-size: 11px;
+  opacity: 0.6;
+  margin-bottom: 3px;
+}
+.phch-hero__stat-val {
+  font-size: 24px;
+  font-weight: 500;
+  color: #FAC775;
+}
+.phch-hero__stat-val--none {
+  color: #5DCAA5;
+}
+.phch-hero__stat-sub {
+  font-size: 11px;
+  margin-top: 2px;
+}
+.phch-hero__stat-sub--action { color: #F09595; }
+.phch-hero__stat-sub--clear  { color: #9FE1CB; }

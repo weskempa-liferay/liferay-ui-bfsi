@@ -1,0 +1,47 @@
+<div class="phpo-wrap" id="${fragmentEntryLinkNamespace}-overview">
+  <div class="phpo-grid">
+
+    <div class="phpo-main">
+      <div class="phpo-card">
+        <div class="phpo-card__title">Quick actions</div>
+        <div class="phpo-actions">
+          <button class="phpo-btn phpo-btn--primary" id="${fragmentEntryLinkNamespace}-btn-pay">Make a payment</button>
+          <button class="phpo-btn" id="${fragmentEntryLinkNamespace}-btn-coi">Download COI</button>
+          <button class="phpo-btn" id="${fragmentEntryLinkNamespace}-btn-coverage">View coverage details</button>
+          <button class="phpo-btn" id="${fragmentEntryLinkNamespace}-btn-claims">View claims</button>
+        </div>
+      </div>
+
+      <div class="phpo-card">
+        <div class="phpo-card__head">
+          <span class="phpo-card__title">Policy summary</span>
+          <span class="phpo-api-tag">Live &mdash; Policy System API</span>
+        </div>
+        <div id="${fragmentEntryLinkNamespace}-policy-rows"></div>
+      </div>
+    </div>
+
+    <div class="phpo-sidebar">
+      <div class="phpo-card phpo-card--sidebar">
+        <div class="phpo-card__title phpo-card__title--sm">Upcoming</div>
+        <div class="phpo-info-row"><span class="phpo-il">Next payment</span><span class="phpo-val--amber" id="${fragmentEntryLinkNamespace}-next-payment">—</span></div>
+        <div class="phpo-info-row phpo-info-row--last"><span class="phpo-il">Amount due</span><span id="${fragmentEntryLinkNamespace}-next-amount">—</span></div>
+        <button class="phpo-btn phpo-btn--primary phpo-btn--block" id="${fragmentEntryLinkNamespace}-sidebar-pay">Pay now</button>
+      </div>
+
+      <div class="phpo-card phpo-card--sidebar phpo-card--broker">
+        <div class="phpo-card__title phpo-card__title--sm">Your broker</div>
+        <div class="phpo-broker-row">
+          <div class="phpo-broker-avatar">SL</div>
+          <div>
+            <div class="phpo-broker-name">Sarah Rodriguez</div>
+            <div class="phpo-broker-firm">Senior Insurance LLC</div>
+          </div>
+        </div>
+        <div class="phpo-broker-contact">(310) 555-0199</div>
+        <div class="phpo-broker-contact phpo-broker-contact--link">s.rodriguez@seniorinsure.com</div>
+      </div>
+    </div>
+
+  </div>
+</div>

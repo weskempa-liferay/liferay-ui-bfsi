@@ -1,0 +1,74 @@
+<div class="bca-wrap" id="${fragmentEntryLinkNamespace}-actions">
+
+  <div class="bca-card">
+    <div class="bca-section-label">Actions</div>
+    <button class="bca-btn bca-btn--primary" id="${fragmentEntryLinkNamespace}-btn-reminder">
+      <span class="bca-btn__icon">
+        <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <rect x="1" y="3" width="12" height="9" rx="1.5" stroke="currentColor" stroke-width="1.1"/>
+          <path d="M1 5L7 8.5L13 5" stroke="currentColor" stroke-width="1.1"/>
+        </svg>
+      </span>
+      Send payment reminder
+    </button>
+    <button class="bca-btn" id="${fragmentEntryLinkNamespace}-btn-coi">
+      <span class="bca-btn__icon">
+        <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <rect x="2" y="1" width="9" height="12" rx="1.5" stroke="currentColor" stroke-width="1.1"/>
+          <line x1="4.5" y1="5" x2="9.5" y2="5" stroke="currentColor" stroke-width="1"/>
+          <line x1="4.5" y1="7.5" x2="9.5" y2="7.5" stroke="currentColor" stroke-width="1"/>
+          <line x1="4.5" y1="10" x2="7.5" y2="10" stroke="currentColor" stroke-width="1"/>
+        </svg>
+      </span>
+      Download COI
+    </button>
+    <button class="bca-btn" id="${fragmentEntryLinkNamespace}-btn-quote">
+      <span class="bca-btn__icon">
+        <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <circle cx="7" cy="7" r="5.5" stroke="currentColor" stroke-width="1.1"/>
+          <path d="M5 7L6.5 8.5L9 5.5" stroke="currentColor" stroke-width="1.1" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </span>
+      Request renewal quote
+    </button>
+    <button class="bca-btn" id="${fragmentEntryLinkNamespace}-btn-note">
+      <span class="bca-btn__icon">
+        <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M9.5 2L12 4.5L5 11.5H2.5V9L9.5 2Z" stroke="currentColor" stroke-width="1.1" stroke-linejoin="round"/>
+          <line x1="7.5" y1="4" x2="10" y2="6.5" stroke="currentColor" stroke-width="1"/>
+        </svg>
+      </span>
+      Log a note
+    </button>
+    <div class="bca-confirm" id="${fragmentEntryLinkNamespace}-reminder-confirm">
+      Payment reminder sent to <span id="${fragmentEntryLinkNamespace}-reminder-name">client</span>.
+    </div>
+  </div>
+
+  <div class="bca-card" id="${fragmentEntryLinkNamespace}-contact-card">
+    <div class="bca-section-label">Primary contact</div>
+    <div class="bca-contact__row">
+      <div class="bca-contact__avatar" id="${fragmentEntryLinkNamespace}-contact-avatar">—</div>
+      <div>
+        <div class="bca-contact__name" id="${fragmentEntryLinkNamespace}-contact-name">—</div>
+        <div class="bca-contact__role" id="${fragmentEntryLinkNamespace}-contact-role">—</div>
+      </div>
+    </div>
+    <div class="bca-contact__detail" id="${fragmentEntryLinkNamespace}-contact-phone">—</div>
+    <div class="bca-contact__detail bca-contact__detail--link" id="${fragmentEntryLinkNamespace}-contact-email">—</div>
+    <div class="bca-contact__pref" id="${fragmentEntryLinkNamespace}-contact-pref">—</div>
+  </div>
+
+  <div class="bca-card">
+    <div class="bca-section-label">Underwriter</div>
+    <div class="bca-contact__row">
+      <div class="bca-contact__avatar bca-contact__avatar--blue" id="${fragmentEntryLinkNamespace}-uw-avatar">—</div>
+      <div>
+        <div class="bca-contact__name" id="${fragmentEntryLinkNamespace}-uw-name">—</div>
+        <div class="bca-contact__role">State Fund Underwriting</div>
+      </div>
+    </div>
+    <div class="bca-contact__detail bca-contact__detail--link" id="${fragmentEntryLinkNamespace}-uw-email">—</div>
+  </div>
+
+</div>

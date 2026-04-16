@@ -1,0 +1,3 @@
+if (fragmentElement) {
+    // Summary logic
+}

@@ -1,0 +1,13 @@
+<label>${input.label}</label>
+<div>
+	<input
+		id="${fragmentEntryLinkNamespace}-value-input"
+		name="${input.name}"
+		type="text"
+		[#assign claimAccountStr = user.getUserId() /] 
+		[#if request.getParameter("default-claim-account")??]
+			[#assign claimAccountStr = request.getParameter("default-claim-account") /]
+		[/#if]
+		value="${claimAccountStr}"
+	/>	
+</div>

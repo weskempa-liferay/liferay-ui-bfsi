@@ -1,0 +1,41 @@
+.phpn-wrap {
+  background: #ffffff;
+  border-bottom: 0.5px solid rgba(0,0,0,0.1);
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none;
+}
+
+.phpn-wrap::-webkit-scrollbar { display: none; }
+
+.phpn-tabs {
+  display: flex;
+  padding: 0 20px;
+  min-width: max-content;
+}
+
+.phpn-tab {
+  font-size: 13px;
+  padding: 12px 16px;
+  cursor: pointer;
+  color: #6b7280;
+  border-bottom: 2px solid transparent;
+  margin-bottom: -1px;
+  white-space: nowrap;
+  user-select: none;
+  transition: color 0.15s;
+}
+
+.phpn-tab:hover { color: #1a1d23; }
+
+.phpn-tab--on {
+  color: #185FA5;
+  border-bottom-color: #185FA5;
+  font-weight: 500;
+}
+
+/* On small screens, reduce padding so all tabs fit */
+@media (max-width: 480px) {
+  .phpn-tabs { padding: 0 8px; }
+  .phpn-tab  { font-size: 12px; padding: 11px 10px; }
+}

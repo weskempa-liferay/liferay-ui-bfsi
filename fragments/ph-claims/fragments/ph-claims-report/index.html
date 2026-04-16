@@ -1,0 +1,70 @@
+<div class="phcr-wrap" id="${fragmentEntryLinkNamespace}-report">
+  <div class="phcr-grid">
+
+    <div class="phcr-card">
+      <div class="phcr-card-head">
+        <span class="phcr-card-title">Report a new claim</span>
+      </div>
+      <div class="phcr-form" id="${fragmentEntryLinkNamespace}-form">
+        <div class="phcr-info-banner">
+          California law requires employers to report work injuries within 24 hours. Complete this form to notify State Fund and open a claim.
+        </div>
+        <div class="phcr-form-row phcr-form-row--2col">
+          <div class="phcr-field">
+            <label class="phcr-label">Injured worker name</label>
+            <input class="phcr-input" type="text" placeholder="Full name" id="${fragmentEntryLinkNamespace}-f-name"/>
+          </div>
+          <div class="phcr-field">
+            <label class="phcr-label">Date of injury</label>
+            <input class="phcr-input" type="date" id="${fragmentEntryLinkNamespace}-f-date"/>
+          </div>
+        </div>
+        <div class="phcr-field">
+          <label class="phcr-label">Body part / injury type</label>
+          <input class="phcr-input" type="text" placeholder="e.g. Back strain, hand laceration" id="${fragmentEntryLinkNamespace}-f-injury"/>
+        </div>
+        <div class="phcr-field">
+          <label class="phcr-label">Description of incident</label>
+          <textarea class="phcr-textarea" placeholder="Describe how and where the injury occurred..." id="${fragmentEntryLinkNamespace}-f-desc"></textarea>
+        </div>
+        <div class="phcr-field">
+          <label class="phcr-label">Medical treatment sought?</label>
+          <div class="phcr-radio-group">
+            <label class="phcr-radio"><input type="radio" name="${fragmentEntryLinkNamespace}-medical" value="emergency"/> Yes &mdash; emergency</label>
+            <label class="phcr-radio"><input type="radio" name="${fragmentEntryLinkNamespace}-medical" value="clinic"/> Yes &mdash; clinic visit</label>
+            <label class="phcr-radio"><input type="radio" name="${fragmentEntryLinkNamespace}-medical" value="none"/> Not yet</label>
+          </div>
+        </div>
+        <button class="phcr-submit-btn" id="${fragmentEntryLinkNamespace}-submit">Submit claim report</button>
+        <div class="phcr-success" id="${fragmentEntryLinkNamespace}-success">
+          <strong>Claim report submitted.</strong> You will receive a confirmation email and a claim number within 1 business day.
+        </div>
+      </div>
+    </div>
+
+    <div>
+      <div class="phcr-side-card">
+        <div class="phcr-side-label">What happens next</div>
+        <div class="phcr-steps">
+          <div class="phcr-step"><span class="phcr-step-num">1</span><span>You receive a claim number by email within 1 business day.</span></div>
+          <div class="phcr-step"><span class="phcr-step-num">2</span><span>An adjuster is assigned and contacts you within 2 business days.</span></div>
+          <div class="phcr-step"><span class="phcr-step-num">3</span><span>You may be asked to provide additional documentation.</span></div>
+          <div class="phcr-step"><span class="phcr-step-num">4</span><span>Injured worker receives information about their rights and medical care options.</span></div>
+        </div>
+      </div>
+      <div class="phcr-side-card">
+        <div class="phcr-side-label">Need help?</div>
+        <div class="phcr-contact-row">
+          <div class="phcr-contact-avatar" id="${fragmentEntryLinkNamespace}-broker-avatar">SL</div>
+          <div>
+            <div class="phcr-contact-name" id="${fragmentEntryLinkNamespace}-broker-name">Sarah Rodriguez</div>
+            <div class="phcr-contact-role">Your broker &mdash; Senior Insurance LLC</div>
+          </div>
+        </div>
+        <div class="phcr-contact-detail" id="${fragmentEntryLinkNamespace}-broker-phone">(310) 555-0199</div>
+        <div class="phcr-contact-detail phcr-contact-detail--link" id="${fragmentEntryLinkNamespace}-broker-email">s.rodriguez@seniorinsure.com</div>
+      </div>
+    </div>
+
+  </div>
+</div>

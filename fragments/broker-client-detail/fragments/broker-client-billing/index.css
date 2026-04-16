@@ -1,0 +1,68 @@
+.bcb-wrap { padding: 20px 20px 0; background: #eef1f7; display: none; }
+.bcb-wrap--visible { display: block; }
+
+.bcb-card {
+  background: #ffffff;
+  border-radius: 12px;
+  border: 0.5px solid rgba(0,0,0,0.1);
+  overflow: hidden;
+  margin-bottom: 14px;
+}
+.bcb-card__head {
+  padding: 12px 16px;
+  border-bottom: 0.5px solid rgba(0,0,0,0.1);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #f4f6fa;
+}
+.bcb-card__title { font-size: 13px; font-weight: 500; color: #1a1d23; }
+.bcb-tag { font-size: 10px; padding: 2px 7px; border-radius: 3px; font-weight: 500; }
+.bcb-tag--api { background: #E6F1FB; color: #0C447C; }
+
+.bcb-summary {
+  padding: 12px 16px 10px;
+  border-bottom: 0.5px solid rgba(0,0,0,0.08);
+}
+.bcb-summary__text { font-size: 12px; color: #6b7280; margin-bottom: 6px; }
+.bcb-summary__bar {
+  height: 6px;
+  background: #f4f6fa;
+  border-radius: 3px;
+  overflow: hidden;
+  margin-bottom: 6px;
+}
+.bcb-summary__bar-fill { height: 100%; background: #1D9E75; border-radius: 3px; transition: width 0.4s; }
+.bcb-summary__note { font-size: 11px; color: #3B6D11; }
+
+.bcb-table-wrap { overflow-x: auto; }
+.bcb-table { width: 100%; border-collapse: collapse; font-size: 12px; table-layout: fixed; }
+.bcb-table thead th {
+  text-align: left;
+  font-size: 10px;
+  font-weight: 500;
+  color: #6b7280;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  padding: 9px 14px;
+  background: #f4f6fa;
+  border-bottom: 0.5px solid rgba(0,0,0,0.1);
+}
+.bcb-table tbody td {
+  padding: 10px 14px;
+  border-bottom: 0.5px solid rgba(0,0,0,0.06);
+  color: #1a1d23;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.bcb-table tbody tr:last-child td { border-bottom: none; }
+.bcb-table tbody tr:hover td { background: #f4f6fa; }
+.bcb-table tbody tr.bcb-row--overdue td { background: #FFFAF8; }
+
+.bcb-amount--credit  { color: #3B6D11; font-weight: 500; }
+.bcb-amount--overdue { color: #A32D2D; font-weight: 500; }
+.bcb-badge { display: inline-block; font-size: 10px; padding: 2px 7px; border-radius: 3px; font-weight: 500; }
+.bcb-badge--paid    { background: #EAF3DE; color: #3B6D11; }
+.bcb-badge--overdue { background: #FCEBEB; color: #791F1F; }
+.bcb-badge--pending { background: #FAEEDA; color: #633806; }

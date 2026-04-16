@@ -1,0 +1,287 @@
+/* ── Wrapper ─────────────────────────────────────── */
+.wc-sidebar-wrap {
+	flex-shrink: 0;
+	position: relative;
+}
+
+/* ── Sidebar ─────────────────────────────────────── */
+.wc-sidebar {
+	background: #ffffff;
+	border-right: 1px solid #e4e7ef;
+	display: flex;
+	flex-direction: column;
+	font-family: 'Geist', sans-serif;
+	gap: 2px;
+	height: 100%;
+	min-height: calc(100vh - 52px);
+	overflow: hidden;
+	padding: 12px 0 0;
+	transition: width 0.22s ease;
+	width: 204px;
+}
+
+/* ── Top row ─────────────────────────────────────── */
+.wc-sidebar__top {
+	align-items: center;
+	display: flex;
+	gap: 9px;
+	margin: 0 8px 8px;
+	padding: 4px 8px;
+}
+
+.wc-sidebar__site-name {
+	color: #8892a8;
+	flex: 1;
+	font-size: 11px;
+	font-weight: 500;
+	letter-spacing: 0.04em;
+	overflow: hidden;
+	white-space: nowrap;
+}
+
+/* ── Toggle button ───────────────────────────────── */
+.wc-sidebar__toggle {
+	align-items: center;
+	background: transparent;
+	border: 1px solid #e4e7ef;
+	border-radius: 7px;
+	color: #8892a8;
+	cursor: pointer;
+	display: flex;
+	flex-shrink: 0;
+	height: 26px;
+	justify-content: center;
+	padding: 0;
+	transition: background 0.12s, color 0.12s, border-color 0.12s;
+	width: 26px;
+}
+
+.wc-sidebar__toggle:hover {
+	background: #e8f1fc;
+	border-color: #c0d8f5;
+	color: #0060c4;
+}
+
+.wc-sidebar__toggle-icon {
+	flex-shrink: 0;
+	transition: transform 0.22s ease;
+}
+
+/* Arrow points right when collapsed */
+.wc-sidebar-wrap--collapsed .wc-sidebar__toggle-icon {
+	transform: rotate(180deg);
+}
+
+/* ── Collapsed state ─────────────────────────────── */
+.wc-sidebar-wrap--collapsed .wc-sidebar {
+	width: 52px;
+}
+
+.wc-sidebar-wrap--collapsed .wc-sidebar__label {
+	opacity: 0;
+	pointer-events: none;
+	width: 0;
+}
+
+.wc-sidebar-wrap--collapsed .wc-sidebar__badge {
+	display: none;
+}
+
+.wc-sidebar-wrap--collapsed .wc-sidebar__section {
+	height: 0;
+	opacity: 0;
+	overflow: hidden;
+	padding: 0;
+}
+
+.wc-sidebar-wrap--collapsed .wc-sidebar__broker-info {
+	display: none;
+}
+
+.wc-sidebar-wrap--collapsed .wc-sidebar__item {
+	justify-content: center;
+	padding: 7px 0;
+}
+
+.wc-sidebar-wrap--collapsed .wc-sidebar__icon {
+	opacity: 0.7;
+}
+
+.wc-sidebar-wrap--collapsed .wc-sidebar__top {
+	justify-content: center;
+	margin: 0 0 8px;
+	padding: 4px 0;
+}
+
+/* Hide site name; show only the toggle button when collapsed */
+.wc-sidebar-wrap--collapsed .wc-sidebar__site-name {
+	display: none;
+}
+
+.wc-sidebar-wrap--collapsed .wc-sidebar__footer {
+	justify-content: center;
+	padding: 12px 0;
+}
+
+.wc-sidebar-wrap--collapsed .wc-sidebar__broker {
+	justify-content: center;
+}
+
+/* ── Section headings ────────────────────────────── */
+.wc-sidebar__section {
+	color: #8892a8;
+	font-size: 10px;
+	font-weight: 500;
+	letter-spacing: 0.1em;
+	overflow: hidden;
+	padding: 14px 16px 5px;
+	text-transform: uppercase;
+	transition: opacity 0.15s, height 0.22s, padding 0.22s;
+	white-space: nowrap;
+}
+
+/* ── Nav items ───────────────────────────────────── */
+.wc-sidebar__item {
+	align-items: center;
+	border-radius: 7px;
+	color: #4a5368;
+	cursor: pointer;
+	display: flex;
+	font-size: 12px;
+	font-weight: 400;
+	gap: 9px;
+	margin: 1px 8px;
+	overflow: hidden;
+	padding: 7px 12px;
+	position: relative;
+	text-decoration: none;
+	transition: background 0.12s, color 0.12s, padding 0.22s;
+	white-space: nowrap;
+}
+
+.wc-sidebar__item:hover {
+	background: #eef0f5;
+	color: #0f1420;
+}
+
+.wc-sidebar__item--active {
+	background: #e8f1fc;
+	color: #0060c4;
+	font-weight: 500;
+}
+
+.wc-sidebar__item--active:hover {
+	background: #dceaf9;
+	color: #0060c4;
+}
+
+.wc-sidebar__icon {
+	flex-shrink: 0;
+	height: 14px;
+	opacity: 0.6;
+	width: 14px;
+}
+
+.wc-sidebar__item--active .wc-sidebar__icon {
+	opacity: 1;
+}
+
+/* ── Labels ──────────────────────────────────────── */
+.wc-sidebar__label {
+	overflow: hidden;
+	transition: opacity 0.15s, width 0.22s;
+	white-space: nowrap;
+}
+
+/* ── Badges ──────────────────────────────────────── */
+.wc-sidebar__badge {
+	border-radius: 10px;
+	font-family: 'Geist Mono', monospace;
+	font-size: 10px;
+	font-weight: 600;
+	margin-left: auto;
+	padding: 1px 6px;
+}
+
+.wc-sidebar__badge--blue { background: #e8f1fc; color: #0060c4; }
+.wc-sidebar__badge--red  { background: #fdf0ee; color: #991b1b; }
+
+/* ── Tooltip (collapsed hover) ───────────────────── */
+.wc-sidebar__item::after {
+	background: #1a2035;
+	border-radius: 6px;
+	color: #f0f4ff;
+	content: attr(data-tooltip);
+	font-size: 11px;
+	font-weight: 500;
+	left: calc(100% + 10px);
+	opacity: 0;
+	padding: 5px 9px;
+	pointer-events: none;
+	position: absolute;
+	top: 50%;
+	transform: translateY(-50%);
+	transition: opacity 0.12s;
+	white-space: nowrap;
+	z-index: 200;
+}
+
+.wc-sidebar-wrap--collapsed .wc-sidebar__item:hover::after {
+	opacity: 1;
+}
+
+/* ── Footer ──────────────────────────────────────── */
+.wc-sidebar__footer {
+	align-items: center;
+	border-top: 1px solid #e4e7ef;
+	display: flex;
+	justify-content: space-between;
+	margin-top: auto;
+	padding: 12px 14px;
+}
+
+.wc-sidebar__broker {
+	align-items: center;
+	display: flex;
+	gap: 9px;
+	min-width: 0;
+}
+
+.wc-sidebar__broker-av {
+	align-items: center;
+	background: #f0ecfb;
+	border: 1px solid #d4caf3;
+	border-radius: 8px;
+	color: #4c3699;
+	display: flex;
+	flex-shrink: 0;
+	font-size: 11px;
+	font-weight: 600;
+	height: 30px;
+	justify-content: center;
+	width: 30px;
+}
+
+.wc-sidebar__broker-info {
+	min-width: 0;
+	overflow: hidden;
+}
+
+.wc-sidebar__broker-name {
+	color: #0f1420;
+	font-family: 'Fraunces', serif;
+	font-size: 13px;
+	font-weight: 500;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+}
+
+.wc-sidebar__broker-co {
+	color: #8892a8;
+	font-size: 11px;
+	margin-top: 1px;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+}

@@ -1,0 +1,15 @@
+[#assign timestamp = .now?long?string?right_pad(4) /]
+
+<label>${input.label}</label>
+<div>
+	<input
+		id="${fragmentEntryLinkNamespace}-value-input"
+		name="${input.name}"
+		type="text"
+		[#assign claimNameStr = "CLM-2026-${timestamp?substring(timestamp?length-4)}" /] 
+		[#if request.getParameter("default-claim-name")??]
+			[#assign claimNameStr = request.getParameter("default-claim-name") /]
+		[/#if]
+		value="${claimNameStr}"
+	/>	
+</div>

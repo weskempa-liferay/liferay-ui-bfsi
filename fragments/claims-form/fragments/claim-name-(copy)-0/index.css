@@ -1,0 +1,14 @@
+.claim-treatment-form-field .phcr-radio-group .phcr-radio {
+	font-weight:700!important;
+}
+
+.claim-treatment-form-field .phcr-radio-group input {
+	width:fit-content;
+}
+
+.claim-treatment-form-field .phcr-radio-group label {
+	text-transform:none!important;
+	font-size:13px!important;
+	color:black!important;
+}
+

@@ -1,0 +1,56 @@
+<div class="phpb-wrap" id="${fragmentEntryLinkNamespace}-billing">
+  <div class="phpb-grid">
+
+    <div class="phpb-main">
+      <div class="phpb-balance-callout" id="${fragmentEntryLinkNamespace}-balance-callout">
+        <div class="phpb-balance-callout__label">Current balance due</div>
+        <div class="phpb-balance-callout__amount" id="${fragmentEntryLinkNamespace}-balance-amount">—</div>
+        <div class="phpb-balance-callout__due" id="${fragmentEntryLinkNamespace}-balance-due">—</div>
+      </div>
+
+      <div class="phpb-card">
+        <div class="phpb-card__head">
+          <span class="phpb-card__title">Recent transactions</span>
+          <span class="phpb-api-tag">Billing System API</span>
+        </div>
+        <div class="phpb-table-wrap">
+          <table class="phpb-table">
+            <colgroup>
+              <col style="width:16%"><col style="width:42%"><col style="width:16%"><col style="width:26%">
+            </colgroup>
+            <thead>
+              <tr>
+                <th>Date</th>
+                <th>Description</th>
+                <th>Amount</th>
+                <th>Balance</th>
+              </tr>
+            </thead>
+            <tbody id="${fragmentEntryLinkNamespace}-tx-tbody"></tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+
+    <div class="phpb-sidebar">
+      <div class="phpb-card phpb-card--sidebar">
+        <div class="phpb-card__title phpb-card__title--sm">Payment schedule</div>
+        <div id="${fragmentEntryLinkNamespace}-schedule-rows"></div>
+        <div class="phpb-progress-bar">
+          <div class="phpb-progress-bar__fill" id="${fragmentEntryLinkNamespace}-progress-fill"></div>
+        </div>
+        <div class="phpb-progress-label" id="${fragmentEntryLinkNamespace}-progress-label">—</div>
+      </div>
+
+      <div class="phpb-card phpb-card--sidebar">
+        <div class="phpb-card__title phpb-card__title--sm">Make a payment</div>
+        <div class="phpb-pay-note" id="${fragmentEntryLinkNamespace}-pay-note">—</div>
+        <button class="phpb-pay-btn" id="${fragmentEntryLinkNamespace}-pay-btn">Pay now</button>
+        <div class="phpb-pay-confirm" id="${fragmentEntryLinkNamespace}-pay-confirm">
+          You will be redirected to the secure payment processor. Liferay passes your policy ID and balance securely.
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>

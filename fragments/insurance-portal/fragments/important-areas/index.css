@@ -1,0 +1,124 @@
+.important-areas-container {
+    padding: 2rem 0;
+    font-family: 'Inter', sans-serif;
+}
+
+.section-title {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #343a40;
+    margin-bottom: 2rem;
+}
+
+.cards-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 2rem;
+}
+
+.policy-card {
+    background: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.04);
+    border: 1px solid #e9ecef;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    min-height: 280px;
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.policy-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 24px rgba(0,0,0,0.08);
+}
+
+.card-header {
+    padding: 1.25rem 1.75rem;
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    color: white;
+    font-weight: 700;
+    font-size: 1.15rem;
+}
+
+.header-icon {
+    font-size: 1.25rem;
+}
+
+.blue-header { background-color: #2b618f; }
+.orange-header { background-color: #e56e0d; }
+.grey-header { background-color: #f4f5f7; color: #495057; border-bottom: 1px solid #e9ecef; }
+
+.card-body {
+    padding: 2rem 1.75rem;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+
+.balance-container {
+    margin-bottom: auto;
+}
+
+.balance-label {
+    font-size: 0.9rem;
+    color: #6c757d;
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.balance-amount {
+    font-size: 2.25rem;
+    font-weight: 800;
+    color: #212529;
+    margin: 0;
+}
+
+.balance-date {
+    font-size: 0.9rem;
+    color: #6c757d;
+    margin-top: 0.5rem;
+}
+
+.card-text {
+    color: #6c757d;
+    line-height: 1.6;
+    margin-bottom: 2rem;
+    font-size: 0.95rem;
+    flex-grow: 1;
+}
+
+.btn {
+    display: inline-block;
+    padding: 0.7rem 2rem;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 0.9rem;
+    text-align: center;
+    transition: all 0.2s ease-in-out;
+    align-self: flex-start;
+}
+
+.btn-primary {
+    background-color: #2b618f;
+    color: white !important;
+}
+
+.btn-primary:hover {
+    background-color: #1a4265;
+    box-shadow: 0 4px 12px rgba(43, 97, 143, 0.3);
+}
+
+.btn-secondary {
+    background-color: #e9ecef;
+    color: #495057 !important;
+}
+
+.btn-secondary:hover {
+    background-color: #dee2e6;
+}

@@ -1,0 +1,62 @@
+.policy-balance-sidebar-container {
+    padding: 1rem 0;
+    font-family: 'Inter', sans-serif;
+}
+
+.balance-card {
+    background: #ffffff;
+    border-radius: 12px;
+    border: 1px solid #e9ecef;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.04);
+    overflow: hidden;
+    padding: 2.5rem;
+    text-align: center;
+}
+
+.header-label {
+    font-size: 1rem;
+    color: #6c757d;
+    margin-bottom: 0.5rem;
+    display: block;
+}
+
+.amount {
+    font-size: 3.5rem;
+    font-weight: 800;
+    color: #212529;
+    margin: 0.5rem 0;
+    letter-spacing: -1px;
+}
+
+.premium-notice {
+    font-size: 0.9rem;
+    color: #6c757d;
+    line-height: 1.5;
+    margin-bottom: 2.5rem;
+    padding: 0 1rem;
+}
+
+.premium-notice strong {
+    color: #495057;
+    font-weight: 700;
+}
+
+.btn-payment {
+    display: block;
+    background-color: #2b618f;
+    color: white;
+    padding: 1rem;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 1rem;
+    transition: all 0.2s ease;
+    text-transform: uppercase;
+}
+
+.btn-payment:hover {
+    background-color: #1a4265;
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(43, 97, 143, 0.3);
+    color: white;
+}

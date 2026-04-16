@@ -1,0 +1,75 @@
+.bp-attn {
+  background: #ffffff;
+  border-radius: 12px;
+  border: 0.5px solid rgba(0,0,0,0.1);
+  overflow: hidden;
+  margin-bottom: 12px;
+}
+
+.bp-attn__head {
+  padding: 12px 16px;
+  border-bottom: 0.5px solid rgba(0,0,0,0.1);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.bp-attn__title {
+  font-size: 13px;
+  font-weight: 500;
+  color: #1a1d23;
+}
+
+.bp-attn__badge {
+  font-size: 10px;
+  padding: 2px 7px;
+  border-radius: 3px;
+  background: #FCEBEB;
+  color: #791F1F;
+  font-weight: 500;
+}
+
+.bp-attn__item {
+  padding: 12px 16px;
+  border-bottom: 0.5px solid rgba(0,0,0,0.08);
+  cursor: pointer;
+  transition: background 0.1s;
+}
+
+.bp-attn__item:last-child {
+  border-bottom: none;
+}
+
+.bp-attn__item:hover {
+  background: #f4f6fa;
+}
+
+.bp-attn__item--selected {
+  background: #FFFAF8;
+  border-left: 3px solid #E24B4A;
+  padding-left: 13px;
+}
+
+.bp-attn__item-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  margin-bottom: 2px;
+}
+
+.bp-attn__item-name {
+  font-size: 13px;
+  font-weight: 500;
+  color: #1a1d23;
+}
+
+.bp-attn__item-bal {
+  font-size: 13px;
+  color: #A32D2D;
+  font-weight: 500;
+}
+
+.bp-attn__item-detail {
+  font-size: 11px;
+  color: #6b7280;
+}

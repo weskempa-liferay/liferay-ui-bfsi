@@ -1,0 +1,230 @@
+/* Hides the element on screens smaller than 768px (standard mobile/small tablet) */
+@media screen and (max-width: 768px) {
+  .wc-nav {
+    display: none!important;
+  }
+}
+.wc-topbar {
+  background: #0D1F3C;
+  height: 56px;
+  display: flex;
+  align-items: center;
+  padding: 0 20px;
+  justify-content: space-between;
+  border-bottom: 1px solid rgba(255,255,255,0.08);
+  position: relative;
+  z-index: 200;
+  font-family: 'Segoe UI', system-ui, sans-serif;
+}
+/* ── LEFT ── */
+.wc-topbar__left {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+/* Nav Menu */
+.wc-topbar .wc-nav__widget-slot .portlet {
+	margin-bottom:0!important;	
+}
+
+/* Logo */
+.wc-logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  text-decoration: none;
+  padding-right: 20px;
+  border-right: 1px solid rgba(255,255,255,0.08);
+  flex-shrink: 0;
+}
+.wc-logo__mark { width: 32px; height: 32px; flex-shrink: 0; }
+.wc-logo__text { display: flex; flex-direction: column; line-height: 1; }
+.wc-logo__name {
+  font-size: 13px; font-weight: 700;
+  color: #fff; letter-spacing: 0.05em; text-transform: uppercase;
+}
+.wc-logo__sub {
+  font-size: 9px; color: #F5A623;
+  letter-spacing: 0.14em; text-transform: uppercase; margin-top: 3px;
+}
+
+/* Home */
+.wc-home-btn {
+  display: flex; align-items: center; justify-content: center;
+  width: 34px; height: 34px; border-radius: 6px;
+  color: #fff; cursor: pointer;
+  transition: background 0.15s;
+  flex-shrink: 0; text-decoration: none;
+}
+.wc-home-btn:hover { background: rgba(255,255,255,0.06); color: #fff; }
+.wc-home-btn svg { width: 18px; height: 18px; }
+
+/* Nav items */
+.wc-nav { display: flex; align-items: center; gap: 4px; }
+
+.wc-nav__item { position: relative; }
+
+.wc-nav__label {
+  display: flex; align-items: center; gap: 5px;
+  height: 34px; padding: 0 10px;
+  font-size: 11px; font-weight: 600;
+  letter-spacing: 0.07em; text-transform: uppercase;
+  color: #fff;
+  cursor: pointer;
+  border-radius: 5px;
+  user-select: none;
+  transition: background 0.15s;
+  white-space: nowrap;
+}
+.wc-nav__label:hover,
+.wc-nav__item.open .wc-nav__label {
+  background: rgba(255,255,255,0.06);
+}
+
+.wc-chevron {
+  width: 11px; height: 11px;
+  flex-shrink: 0;
+  color: #F5A623;
+  transition: transform 0.2s;
+}
+.wc-nav__item.open .wc-chevron { transform: rotate(180deg); }
+
+/* Dropdown */
+.wc-dropdown {
+  display: none;
+  position: absolute; top: calc(100% + 5px); left: 0;
+  background: #12284A;
+  border: 1px solid rgba(255,255,255,0.1);
+  border-radius: 8px;
+  min-width: 204px;
+  padding: 6px;
+  box-shadow: 0 10px 36px rgba(0,0,0,0.45);
+  z-index: 1000;
+}
+.wc-nav__item.open .wc-dropdown {
+  display: block;
+  animation: wcDdIn 0.14s ease;
+}
+@keyframes wcDdIn {
+  from { opacity: 0; transform: translateY(-4px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+.wc-dd__item {
+  display: block; padding: 9px 12px;
+  border-radius: 6px;
+  font-size: 12px; color: #8A9BBE;
+  cursor: pointer; white-space: nowrap;
+  transition: background 0.1s, color 0.1s;
+  text-decoration: none;
+}
+.wc-dd__item:hover { background: rgba(255,255,255,0.07); color: #fff; }
+
+.wc-dd__sep { height: 1px; background: rgba(255,255,255,0.08); margin: 4px 0; }
+
+/* Menu Display Widget slot */
+.wc-nav__widget-slot {
+  display: flex;
+  align-items: center;
+}
+
+/* ── RIGHT ── */
+.wc-topbar__right {
+  display: flex;
+  align-items: center;
+  gap: 2px;
+}
+
+.wc-icon-btn {
+  position: relative;
+  display: flex; align-items: center; justify-content: center;
+  width: 34px; height: 34px;
+  border-radius: 6px;
+  color: #8A9BBE; cursor: pointer;
+  transition: background 0.15s, color 0.15s;
+}
+.wc-icon-btn:hover,
+.wc-icon-btn.open { background: rgba(255,255,255,0.06); color: #fff; }
+.wc-icon-btn > svg { width: 18px; height: 18px; }
+
+.wc-notif-dot {
+  position: absolute; top: 7px; right: 7px;
+  width: 7px; height: 7px;
+  background: #F5A623; border-radius: 50%;
+  border: 1.5px solid #0D1F3C;
+}
+
+.wc-icon-dd {
+  right: 0; left: auto;
+  min-width: 240px;
+}
+
+.wc-search-dd { padding: 10px 12px; }
+.wc-search-dd input {
+  width: 100%;
+  background: rgba(255,255,255,0.07);
+  border: 1px solid rgba(255,255,255,0.1);
+  border-radius: 6px;
+  padding: 8px 10px;
+  font-size: 12px; color: #fff; outline: none;
+}
+.wc-search-dd input::placeholder { color: #8A9BBE; }
+
+.wc-dd-head {
+  font-size: 10px; font-weight: 700;
+  color: #F5A623;
+  text-transform: uppercase; letter-spacing: 0.1em;
+  margin-bottom: 8px;
+}
+
+.wc-notif-badge {
+  display: inline-flex; align-items: center; justify-content: center;
+  background: #D4860A; color: #fff;
+  border-radius: 10px; padding: 1px 6px;
+  font-size: 10px; font-weight: 700;
+  margin-left: 6px;
+}
+
+.wc-notif-item { padding: 8px 0; border-bottom: 1px solid rgba(255,255,255,0.08); }
+.wc-notif-item:last-child { border-bottom: none; }
+.wc-notif-title { font-size: 12px; font-weight: 600; color: #fff; margin-bottom: 2px; }
+.wc-notif-sub   { font-size: 11px; color: #8A9BBE; }
+
+.wc-cal-item { padding: 7px 0; border-bottom: 1px solid rgba(255,255,255,0.08); }
+.wc-cal-item:last-child { border-bottom: none; }
+.wc-cal-name { font-size: 12px; font-weight: 600; color: #fff; margin-bottom: 2px; }
+.wc-cal-date { font-size: 11px; color: #8A9BBE; }
+
+.wc-user-avatar .sticker {
+	width:30px;
+	height:30px;
+}
+.wc-user-avatar {
+  width: 30px; height: 30px; border-radius: 50%;
+  background: #1E3A68; border: 1.5px solid #D4860A;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 11px; font-weight: 700; color: #F5A623; cursor: pointer;
+}
+.wc-user-avatar-lg {
+  width: 36px; height: 36px; border-radius: 50%;
+  background: #1E3A68; border: 1.5px solid #D4860A;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 13px; font-weight: 700; color: #F5A623;
+  flex-shrink: 0;
+}
+.wc-user-info-row {
+  display: flex; align-items: center; gap: 10px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid rgba(255,255,255,0.08);
+  margin-bottom: 6px;
+}
+.wc-user-name { font-size: 13px; font-weight: 600; color: #fff; }
+.wc-user-role { font-size: 11px; color: #8A9BBE; }
+
+.wc-profile-link {
+  padding: 7px 0; font-size: 12px;
+  color: #8A9BBE; cursor: pointer; display: block;
+}
+.wc-profile-link:hover { color: #fff; }
+.wc-profile-link--signout { color: #F88 !important; }

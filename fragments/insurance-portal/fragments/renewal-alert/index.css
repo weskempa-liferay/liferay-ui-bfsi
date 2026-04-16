@@ -1,0 +1,46 @@
+.renewal-alert-container {
+    padding: 1rem;
+    font-family: 'Inter', sans-serif;
+    margin-bottom: 2rem;
+}
+
+.alert-content {
+    background-color: #f0faf8;
+    border: 1px solid #108876;
+    border-radius: 4px;
+    padding: 0.75rem 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1.5rem;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.02);
+}
+
+.alert-icon {
+    font-size: 1.25rem;
+    color: #108876;
+}
+
+.alert-text {
+    font-size: 1.1rem;
+    color: #108876;
+    font-weight: 500;
+}
+
+.btn-renew {
+    background-color: transparent;
+    border: 1px solid #2b618f;
+    color: #2b618f;
+    padding: 0.25rem 1.5rem;
+    border-radius: 20px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: all 0.2s ease;
+    text-transform: uppercase;
+    font-size: 0.9em;
+}
+
+.btn-renew:hover {
+    background-color: #2b618f;
+    color: white;
+}

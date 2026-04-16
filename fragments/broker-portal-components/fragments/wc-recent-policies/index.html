@@ -1,0 +1,79 @@
+<div class="wc-rp" id="${fragmentEntryLinkNamespace}-rp">
+
+	<div class="wc-rp__header">
+		<span class="wc-rp__title">Recent policy activity</span>
+		<div class="wc-rp__header-right">
+			<div class="wc-rp__filters" id="${fragmentEntryLinkNamespace}-filters">
+				<button class="wc-rp__filter wc-rp__filter--active" data-filter="all">All</button>
+				<button class="wc-rp__filter" data-filter="active">Active</button>
+				<button class="wc-rp__filter" data-filter="expiring">Expiring</button>
+				<button class="wc-rp__filter" data-filter="audit">Audit</button>
+			</div>
+			<a href="/policies" class="wc-rp__view-all">View all &rarr;</a>
+		</div>
+	</div>
+
+	<div class="wc-rp__body">
+		<div class="wc-rp__table-wrap">
+			<table class="wc-rp__table">
+				<colgroup>
+					<col style="width:28%">
+					<col style="width:15%">
+					<col style="width:9%">
+					<col style="width:15%">
+					<col style="width:13%">
+					<col style="width:11%">
+					<col style="width:9%">
+				</colgroup>
+				<thead>
+					<tr>
+						<th>Employer</th>
+						<th>Policy #</th>
+						<th>Code</th>
+						<th>
+							<button class="wc-rp__sort" data-col="expiration" id="${fragmentEntryLinkNamespace}-sort-exp">
+								Expiration
+								<svg class="wc-rp__sort-icon wc-rp__sort-icon--active" viewBox="0 0 10 10" fill="currentColor"><path d="M5 1l3 4H2l3-4zM5 9L2 5h6L5 9z"/></svg>
+							</button>
+						</th>
+						<th>
+							<button class="wc-rp__sort" data-col="premium" id="${fragmentEntryLinkNamespace}-sort-prem">
+								Premium
+								<svg class="wc-rp__sort-icon" viewBox="0 0 10 10" fill="currentColor"><path d="M5 1l3 4H2l3-4zM5 9L2 5h6L5 9z"/></svg>
+							</button>
+						</th>
+						<th>Status</th>
+						<th></th>
+					</tr>
+				</thead>
+				<tbody id="${fragmentEntryLinkNamespace}-tbody">
+					<tr class="wc-rp__loading">
+						<td colspan="7">
+							<div class="wc-rp__skeleton-rows">
+								<div class="wc-rp__skeleton-row"></div>
+								<div class="wc-rp__skeleton-row"></div>
+								<div class="wc-rp__skeleton-row"></div>
+								<div class="wc-rp__skeleton-row"></div>
+								<div class="wc-rp__skeleton-row"></div>
+							</div>
+						</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+
+		<div class="wc-rp__footer">
+			<span class="wc-rp__count" id="${fragmentEntryLinkNamespace}-count">Showing 5 of 47 policies</span>
+			<div class="wc-rp__pagination" id="${fragmentEntryLinkNamespace}-pagination">
+				<button class="wc-rp__page-btn" id="${fragmentEntryLinkNamespace}-prev" disabled>
+					<svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" width="12" height="12"><path d="M10 3L5 8l5 5"/></svg>
+				</button>
+				<span class="wc-rp__page-info" id="${fragmentEntryLinkNamespace}-page-info">Page 1</span>
+				<button class="wc-rp__page-btn" id="${fragmentEntryLinkNamespace}-next">
+					<svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" width="12" height="12"><path d="M6 3l5 5-5 5"/></svg>
+				</button>
+			</div>
+		</div>
+	</div>
+
+</div>

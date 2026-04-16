@@ -1,0 +1,81 @@
+<div class="bp-table-wrap" id="${fragmentEntryLinkNamespace}-table-wrap">
+  <div class="bp-table__head">
+    <span class="bp-table__title">Book of business</span>
+    <div class="bp-table__head-right">
+      <span class="bp-table__api-tag">Live — Policy System API</span>
+      <div class="bp-table__filters">
+        <span class="bp-table__chip bp-table__chip--on" id="${fragmentEntryLinkNamespace}-chip-all" data-filter="all">All</span>
+        <span class="bp-table__chip" id="${fragmentEntryLinkNamespace}-chip-overdue" data-filter="overdue">Attention required</span>
+        <span class="bp-table__chip" id="${fragmentEntryLinkNamespace}-chip-renewal" data-filter="renewal">Renewals</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="bp-table__scroll">
+    <table class="bp-table" id="${fragmentEntryLinkNamespace}-table">
+      <colgroup>
+        <col style="width:26%">
+        <col style="width:17%">
+        <col style="width:13%">
+        <col style="width:15%">
+        <col style="width:15%">
+        <col style="width:14%">
+      </colgroup>
+      <thead>
+        <tr>
+          <th>Client</th>
+          <th>Policy #</th>
+          <th>Status</th>
+          <th>Balance due</th>
+          <th>Renewal date</th>
+          <th></th>
+        </tr>
+      </thead>
+      <tbody id="${fragmentEntryLinkNamespace}-tbody"></tbody>
+    </table>
+  </div>
+
+  <div class="bp-detail" id="${fragmentEntryLinkNamespace}-detail" style="display:none;">
+    <div class="bp-detail__header">
+      <div>
+        <div class="bp-detail__name" id="${fragmentEntryLinkNamespace}-dp-name"></div>
+        <div class="bp-detail__policy" id="${fragmentEntryLinkNamespace}-dp-policy"></div>
+      </div>
+      <button class="bp-detail__close" id="${fragmentEntryLinkNamespace}-dp-close">close</button>
+    </div>
+    <div class="bp-detail__grid">
+      <div class="bp-detail__field">
+        <div class="bp-detail__label">Policy status</div>
+        <div class="bp-detail__val" id="${fragmentEntryLinkNamespace}-dp-status"></div>
+      </div>
+      <div class="bp-detail__field">
+        <div class="bp-detail__label">Outstanding balance</div>
+        <div class="bp-detail__val bp-detail__val--red" id="${fragmentEntryLinkNamespace}-dp-balance"></div>
+      </div>
+      <div class="bp-detail__field">
+        <div class="bp-detail__label">Last payment received</div>
+        <div class="bp-detail__val" id="${fragmentEntryLinkNamespace}-dp-lastpay"></div>
+      </div>
+      <div class="bp-detail__field">
+        <div class="bp-detail__label">Due date</div>
+        <div class="bp-detail__val bp-detail__val--amber" id="${fragmentEntryLinkNamespace}-dp-due"></div>
+      </div>
+      <div class="bp-detail__field">
+        <div class="bp-detail__label">Annual premium</div>
+        <div class="bp-detail__val" id="${fragmentEntryLinkNamespace}-dp-premium"></div>
+      </div>
+      <div class="bp-detail__field">
+        <div class="bp-detail__label">Renewal date</div>
+        <div class="bp-detail__val" id="${fragmentEntryLinkNamespace}-dp-renewal"></div>
+      </div>
+    </div>
+    <div class="bp-detail__source" id="${fragmentEntryLinkNamespace}-dp-source">
+      Fetched via Billing System API for policy ID <span id="${fragmentEntryLinkNamespace}-dp-policyid"></span>
+    </div>
+    <div class="bp-detail__actions">
+      <button class="bp-detail__btn-primary">Contact client</button>
+      <button class="bp-detail__btn-sec">View full policy</button>
+      <button class="bp-detail__btn-sec">Download COI</button>
+    </div>
+  </div>
+</div>

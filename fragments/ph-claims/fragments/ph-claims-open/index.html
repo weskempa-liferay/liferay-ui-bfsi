@@ -1,0 +1,93 @@
+<div class="phco-wrap" id="${fragmentEntryLinkNamespace}-open">
+  <div class="phco-grid">
+
+    <div class="phco-main">
+
+      <div class="phco-card">
+        <div class="phco-card-head">
+          <span class="phco-card-title">Open claims</span>
+          <span class="phco-tag phco-tag--action" id="${fragmentEntryLinkNamespace}-open-count-tag">—</span>
+        </div>
+        <div id="${fragmentEntryLinkNamespace}-claims-list"></div>
+      </div>
+
+      <div class="phco-card" id="${fragmentEntryLinkNamespace}-detail-card">
+        <div class="phco-card-head">
+          <span class="phco-card-title" id="${fragmentEntryLinkNamespace}-detail-title">Claim status</span>
+          <span class="phco-tag phco-tag--api">Claims System API</span>
+        </div>
+
+        <div class="phco-action-banner" id="${fragmentEntryLinkNamespace}-action-banner">
+          <div class="phco-action-banner__title">
+            <svg width="14" height="14" viewBox="0 0 14 14" fill="none" style="flex-shrink:0">
+              <circle cx="7" cy="7" r="6" stroke="#854F0B" stroke-width="1.2"/>
+              <line x1="7" y1="4" x2="7" y2="7.5" stroke="#854F0B" stroke-width="1.3" stroke-linecap="round"/>
+              <circle cx="7" cy="9.5" r="0.7" fill="#854F0B"/>
+            </svg>
+            <span id="${fragmentEntryLinkNamespace}-banner-title">Action required</span>
+          </div>
+          <div class="phco-action-banner__body" id="${fragmentEntryLinkNamespace}-banner-body">—</div>
+        </div>
+
+        <div class="phco-timeline" id="${fragmentEntryLinkNamespace}-timeline"></div>
+
+        <div class="phco-upload-zone" id="${fragmentEntryLinkNamespace}-upload-zone">
+          <div class="phco-upload-zone__icon">
+            <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+              <path d="M10 14V5M10 5L7 8M10 5L13 8" stroke="#6b7280" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M3 15V17H17V15" stroke="#6b7280" stroke-width="1.4" stroke-linecap="round"/>
+            </svg>
+          </div>
+          <div class="phco-upload-zone__title" id="${fragmentEntryLinkNamespace}-upload-title">Upload required document</div>
+          <div class="phco-upload-zone__sub" id="${fragmentEntryLinkNamespace}-upload-sub">Click to select PDF or image &middot; Max 10 MB</div>
+          <button class="phco-upload-zone__btn" id="${fragmentEntryLinkNamespace}-upload-btn">Submit document</button>
+        </div>
+        <div class="phco-upload-success" id="${fragmentEntryLinkNamespace}-upload-success">
+          <strong>Document submitted.</strong> Your adjuster will be notified and will resume review within 1 business day.
+        </div>
+
+      </div>
+
+      <div class="phco-card phco-card--empty" id="${fragmentEntryLinkNamespace}-empty-card">
+        <div class="phco-empty">
+          <div class="phco-empty__icon">
+            <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+              <path d="M4 10L8.5 14.5L16 6" stroke="#1D9E75" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </div>
+          <div class="phco-empty__title">No open claims</div>
+          <div class="phco-empty__sub">Your policy has no active claims. If a worker is injured, use the "Report a new claim" tab.</div>
+          <button class="phco-empty__btn" onclick="Liferay.fire('ph:tab-request',{tab:'report'})">Report a new claim</button>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="phco-sidebar" id="${fragmentEntryLinkNamespace}-sidebar">
+      <div class="phco-side-card">
+        <div class="phco-side-label">Your adjuster</div>
+        <div class="phco-contact-row">
+          <div class="phco-contact-avatar" id="${fragmentEntryLinkNamespace}-adj-avatar">MT</div>
+          <div>
+            <div class="phco-contact-name" id="${fragmentEntryLinkNamespace}-adj-name">—</div>
+            <div class="phco-contact-role">Claims adjuster &mdash; State Fund</div>
+          </div>
+        </div>
+        <div class="phco-contact-detail" id="${fragmentEntryLinkNamespace}-adj-phone">—</div>
+        <div class="phco-contact-detail phco-contact-detail--link" id="${fragmentEntryLinkNamespace}-adj-email">—</div>
+        <div class="phco-contact-note">Response time: 1 business day</div>
+      </div>
+
+      <div class="phco-side-card">
+        <div class="phco-side-label">Claim details</div>
+        <div id="${fragmentEntryLinkNamespace}-claim-details"></div>
+      </div>
+
+      <div class="phco-side-card">
+        <div class="phco-side-label">Claim documents</div>
+        <div id="${fragmentEntryLinkNamespace}-claim-docs"></div>
+      </div>
+    </div>
+
+  </div>
+</div>

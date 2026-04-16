@@ -1,0 +1,23 @@
+.phcn-nav {
+  background: #ffffff;
+  border-bottom: 0.5px solid rgba(0,0,0,0.1);
+  display: flex;
+  padding: 0 20px;
+}
+.phcn-tab {
+  font-size: 13px;
+  padding: 11px 16px;
+  cursor: pointer;
+  color: #6b7280;
+  border-bottom: 2px solid transparent;
+  margin-bottom: -1px;
+  white-space: nowrap;
+  user-select: none;
+  transition: color 0.15s;
+}
+.phcn-tab:hover { color: #1a1d23; }
+.phcn-tab--on {
+  color: #185FA5;
+  border-bottom-color: #185FA5;
+  font-weight: 500;
+}

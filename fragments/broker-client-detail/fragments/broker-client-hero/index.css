@@ -1,0 +1,114 @@
+.bch-breadcrumb {
+  padding: 10px 20px;
+  background: #eef1f7;
+  border-bottom: 0.5px solid rgba(0,0,0,0.1);
+  font-size: 12px;
+  color: #6b7280;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+.bch-breadcrumb__link {
+  color: #185FA5;
+  text-decoration: none;
+}
+.bch-breadcrumb__link:hover { text-decoration: underline; }
+.bch-breadcrumb__sep { color: #6b7280; }
+.bch-breadcrumb__current { color: #1a1d23; }
+
+.bch-hero {
+  background: #042C53;
+  color: #ffffff;
+  padding: 20px 24px 0;
+}
+.bch-hero__top {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 16px;
+  gap: 16px;
+}
+.bch-hero__name {
+  font-size: 20px;
+  font-weight: 500;
+  margin-bottom: 4px;
+}
+.bch-hero__meta {
+  font-size: 12px;
+  opacity: 0.6;
+  margin-bottom: 3px;
+}
+.bch-hero__policy {
+  font-size: 11px;
+  opacity: 0.5;
+  font-family: 'SF Mono', 'Fira Code', monospace;
+}
+.bch-hero__badges {
+  display: flex;
+  gap: 8px;
+  margin-top: 10px;
+  flex-wrap: wrap;
+}
+.bch-hero__badge {
+  font-size: 11px;
+  padding: 3px 10px;
+  border-radius: 4px;
+  font-weight: 500;
+}
+.bch-hero__badge--active  { background: #1D9E75; color: #ffffff; }
+.bch-hero__badge--overdue { background: #E24B4A; color: #ffffff; }
+.bch-hero__badge--renewal { background: #EF9F27; color: #412402; }
+
+.bch-hero__right { text-align: right; flex-shrink: 0; }
+.bch-hero__bal-label {
+  font-size: 11px;
+  opacity: 0.6;
+  margin-bottom: 4px;
+}
+.bch-hero__bal {
+  font-size: 32px;
+  font-weight: 500;
+  color: #F09595;
+}
+.bch-hero__bal--zero { color: #5DCAA5; }
+.bch-hero__bal-due {
+  font-size: 11px;
+  color: #F7C1C1;
+  margin-top: 2px;
+}
+.bch-hero__bal-due--ok { color: #9FE1CB; }
+
+.bch-hero__stats {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 1px;
+  background: rgba(255,255,255,0.08);
+  border-radius: 8px 8px 0 0;
+  overflow: hidden;
+  margin-top: 16px;
+}
+.bch-hero__stat {
+  background: rgba(255,255,255,0.05);
+  padding: 12px 14px;
+}
+.bch-hs__label {
+  font-size: 10px;
+  opacity: 0.55;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  margin-bottom: 4px;
+}
+.bch-hs__val {
+  font-size: 14px;
+  font-weight: 500;
+  color: #ffffff;
+}
+.bch-hs__val--green { color: #5DCAA5; }
+.bch-hs__val--amber { color: #FAC775; }
+.bch-hs__val--red   { color: #F09595; }
+
+@media (max-width: 768px) {
+  .bch-hero__stats { grid-template-columns: repeat(3, 1fr); }
+  .bch-hero__top { flex-direction: column; }
+  .bch-hero__right { text-align: left; }
+}

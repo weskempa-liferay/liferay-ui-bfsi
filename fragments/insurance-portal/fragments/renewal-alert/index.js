@@ -1,0 +1,1 @@
+// Optional interactive logic for the renewal alert banner can go here

@@ -1,0 +1,44 @@
+.bp-stats {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 10px;
+  padding: 16px 20px;
+  background: #eef1f7;
+}
+
+.bp-stats__card {
+  background: #f4f6fa;
+  border-radius: 8px;
+  padding: 12px 14px;
+}
+
+.bp-stats__label {
+  font-size: 11px;
+  color: #6b7280;
+  margin-bottom: 5px;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.bp-stats__val {
+  font-size: 22px;
+  font-weight: 500;
+  line-height: 1.2;
+}
+
+.bp-stats__val--blue  { color: #185FA5; }
+.bp-stats__val--green { color: #3B6D11; }
+.bp-stats__val--amber { color: #854F0B; }
+.bp-stats__val--red   { color: #A32D2D; }
+
+.bp-stats__sub {
+  font-size: 11px;
+  color: #6b7280;
+  margin-top: 2px;
+}
+
+@media (max-width: 768px) {
+  .bp-stats {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}

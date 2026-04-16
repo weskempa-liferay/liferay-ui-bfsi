@@ -1,0 +1,76 @@
+.bcc-wrap { padding: 20px 20px 0; background: #eef1f7; display: none; }
+.bcc-wrap--visible { display: block; }
+
+.bcc-card {
+  background: #ffffff;
+  border-radius: 12px;
+  border: 0.5px solid rgba(0,0,0,0.1);
+  overflow: hidden;
+  margin-bottom: 14px;
+}
+.bcc-card__head {
+  padding: 12px 16px;
+  border-bottom: 0.5px solid rgba(0,0,0,0.1);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #f4f6fa;
+}
+.bcc-card__title { font-size: 13px; font-weight: 500; color: #1a1d23; }
+.bcc-tag { font-size: 10px; padding: 2px 7px; border-radius: 3px; font-weight: 500; }
+.bcc-tag--zero    { background: #EAF3DE; color: #3B6D11; }
+.bcc-tag--open    { background: #FCEBEB; color: #791F1F; }
+.bcc-tag--api     { background: #E6F1FB; color: #0C447C; }
+
+.bcc-empty {
+  padding: 28px 16px;
+  text-align: center;
+}
+.bcc-empty__icon {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: #EAF3DE;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 10px;
+}
+.bcc-empty__title { font-size: 14px; font-weight: 500; color: #3B6D11; margin-bottom: 4px; }
+.bcc-empty__sub   { font-size: 12px; color: #6b7280; }
+
+.bcc-open-item {
+  padding: 12px 16px;
+  border-bottom: 0.5px solid rgba(0,0,0,0.06);
+  font-size: 12px;
+}
+.bcc-open-item:last-child { border-bottom: none; }
+.bcc-open-item__row { display: flex; justify-content: space-between; margin-bottom: 3px; }
+.bcc-open-item__title { font-weight: 500; color: #1a1d23; }
+.bcc-open-item__amount { color: #A32D2D; font-weight: 500; }
+.bcc-open-item__detail { color: #6b7280; }
+
+.bcc-history { padding: 0 16px 8px; }
+.bcc-year-label {
+  font-size: 11px;
+  font-weight: 500;
+  color: #6b7280;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  margin: 14px 0 6px;
+}
+.bcc-hist-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 6px 0;
+  border-bottom: 0.5px solid rgba(0,0,0,0.06);
+  font-size: 12px;
+}
+.bcc-hist-row:last-child { border-bottom: none; }
+.bcc-hist-label { color: #6b7280; }
+.bcc-hist-val--good  { color: #3B6D11; font-weight: 500; }
+.bcc-hist-val--warn  { color: #A32D2D; font-weight: 500; }
+.bcc-status-badge { display: inline-block; font-size: 10px; padding: 2px 7px; border-radius: 3px; font-weight: 500; }
+.bcc-status-badge--closed { background: #EAF3DE; color: #3B6D11; }
+.bcc-status-badge--open   { background: #FCEBEB; color: #791F1F; }

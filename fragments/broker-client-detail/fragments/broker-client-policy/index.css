@@ -1,0 +1,81 @@
+.bcp-wrap { padding: 20px 20px 0; background: #eef1f7; display: none; }
+.bcp-wrap--visible { display: block; }
+
+.bcp-card {
+  background: #ffffff;
+  border-radius: 12px;
+  border: 0.5px solid rgba(0,0,0,0.1);
+  overflow: hidden;
+  margin-bottom: 14px;
+}
+.bcp-card__head {
+  padding: 12px 16px;
+  border-bottom: 0.5px solid rgba(0,0,0,0.1);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #f4f6fa;
+}
+.bcp-card__title { font-size: 13px; font-weight: 500; color: #1a1d23; }
+.bcp-tag { font-size: 10px; padding: 2px 7px; border-radius: 3px; font-weight: 500; }
+.bcp-tag--api { background: #E6F1FB; color: #0C447C; }
+.bcp-tag--dms { background: #EEEDFE; color: #3C3489; }
+
+.bcp-info-row {
+  display: flex;
+  justify-content: space-between;
+  font-size: 13px;
+  padding: 8px 16px;
+  border-bottom: 0.5px solid rgba(0,0,0,0.06);
+}
+.bcp-info-row:last-child { border-bottom: none; }
+.bcp-info-row--col { flex-direction: column; gap: 8px; }
+.bcp-il { color: #6b7280; }
+
+.bcp-xmod {
+  background: #EAF3DE;
+  border-radius: 8px;
+  margin: 12px 16px;
+  padding: 10px 12px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+.bcp-xmod__val { font-size: 22px; font-weight: 500; color: #3B6D11; flex-shrink: 0; }
+.bcp-xmod__text { font-size: 12px; color: #085041; line-height: 1.5; }
+.bcp-xmod--warn { background: #FCEBEB; }
+.bcp-xmod__val--warn { color: #A32D2D; }
+.bcp-xmod__text--warn { color: #501313; }
+
+.bcp-class-tag {
+  display: inline-block;
+  font-size: 11px;
+  padding: 3px 8px;
+  border-radius: 4px;
+  background: #E6F1FB;
+  color: #0C447C;
+  margin: 2px 3px 2px 0;
+}
+
+.bcp-doc-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 16px;
+  border-bottom: 0.5px solid rgba(0,0,0,0.06);
+  font-size: 13px;
+}
+.bcp-doc-row--last { border-bottom: none; }
+.bcp-doc-name { font-weight: 500; margin-bottom: 2px; }
+.bcp-doc-meta { font-size: 11px; color: #6b7280; }
+.bcp-btn {
+  font-size: 11px;
+  padding: 5px 12px;
+  border-radius: 6px;
+  border: 0.5px solid rgba(0,0,0,0.18);
+  background: #f4f6fa;
+  color: #1a1d23;
+  cursor: pointer;
+  white-space: nowrap;
+}
+.bcp-btn--primary { background: #185FA5; color: #ffffff; border-color: #185FA5; }

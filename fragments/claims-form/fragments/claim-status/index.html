@@ -1,0 +1,13 @@
+<label>${input.label}</label>
+<div>
+	<input
+		id="${fragmentEntryLinkNamespace}-value-input"
+		name="${input.name}"
+		type="text"
+		[#assign claimStatusStr = "Claim reported" /] 
+		[#if request.getParameter("default-claim-status")??]
+			[#assign claimStatusStr = request.getParameter("default-claim-status") /]
+		[/#if]
+		value="${claimStatusStr}"
+	/>	
+</div>

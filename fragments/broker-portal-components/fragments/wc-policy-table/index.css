@@ -1,0 +1,115 @@
+.wc-policy-table {
+	background: #ffffff;
+	border: 1px solid #e4e7ef;
+	border-radius: 12px;
+	font-family: 'Geist', sans-serif;
+	width: 100%;
+}
+
+.wc-card__header {
+	align-items: center;
+	border-bottom: 1px solid #e4e7ef;
+	display: flex;
+	justify-content: space-between;
+	padding: 14px 18px 12px;
+}
+
+.wc-card__title {
+	color: #0f1420;
+	font-family: 'Fraunces', serif;
+	font-size: 14px;
+	font-weight: 500;
+}
+
+.wc-card__action {
+	color: #0060c4;
+	cursor: pointer;
+	font-size: 11px;
+	font-weight: 500;
+	text-decoration: none;
+}
+
+.wc-card__action:hover {
+	text-decoration: underline;
+}
+
+.wc-card__body {
+	padding: 14px 18px;
+}
+
+.wc-table {
+	border-collapse: collapse;
+	table-layout: fixed;
+	width: 100%;
+}
+
+.wc-table th {
+	color: #8892a8;
+	font-size: 10px;
+	font-weight: 500;
+	letter-spacing: 0.07em;
+	padding: 0 0 10px;
+	text-align: left;
+	text-transform: uppercase;
+	white-space: nowrap;
+}
+
+.wc-table td {
+	border-bottom: 1px solid #f4f6fa;
+	color: #4a5368;
+	font-size: 12px;
+	padding: 9px 0;
+	vertical-align: middle;
+}
+
+.wc-table tr:last-child td {
+	border-bottom: none;
+}
+
+.wc-table__employer-name {
+	color: #0f1420;
+	font-size: 12px;
+	font-weight: 500;
+}
+
+.wc-table__employer-ind {
+	color: #8892a8;
+	font-size: 10px;
+	margin-top: 1px;
+}
+
+.wc-table__mono {
+	color: #8892a8;
+	font-family: 'Geist Mono', monospace;
+	font-size: 11px;
+}
+
+.wc-table__premium {
+	color: #0f1420;
+	font-family: 'Geist Mono', monospace;
+	font-size: 12px;
+}
+
+.wc-table__exp-red   { color: #991b1b; font-weight: 500; }
+.wc-table__exp-amber { color: #92400e; font-weight: 500; }
+
+.wc-pill {
+	align-items: center;
+	border-radius: 20px;
+	display: inline-flex;
+	font-size: 10px;
+	font-weight: 500;
+	gap: 4px;
+	padding: 2px 8px;
+}
+
+.wc-pill__dot {
+	background: currentColor;
+	border-radius: 50%;
+	height: 4px;
+	width: 4px;
+}
+
+.wc-pill--green { background: #e6f7f2; color: #006647; }
+.wc-pill--amber { background: #fef3e2; color: #92400e; }
+.wc-pill--red   { background: #fdf0ee; color: #991b1b; }

@@ -1,0 +1,40 @@
+<div class="wc-portfolio-health" id="${fragmentEntryLinkNamespace}-portfolio-health">
+	<div class="wc-card__header">
+		<span class="wc-card__title">Portfolio health</span>
+	</div>
+	<div class="wc-card__body">
+		<div class="wc-donut__wrap">
+			<svg class="wc-donut__svg" viewBox="0 0 84 84" width="84" height="84">
+				<circle cx="42" cy="42" r="32" fill="none" stroke="#eef0f5" stroke-width="11"/>
+				<circle class="wc-donut__arc wc-donut__arc--active" cx="42" cy="42" r="32" fill="none" stroke="#0071e3" stroke-width="11" stroke-dasharray="127 74" stroke-linecap="round" transform="rotate(-90 42 42)"/>
+				<circle class="wc-donut__arc wc-donut__arc--renewing" cx="42" cy="42" r="32" fill="none" stroke="#b45309" stroke-width="11" stroke-dasharray="57 144" stroke-linecap="round" transform="rotate(-90 42 42)" stroke-dashoffset="-128"/>
+				<circle class="wc-donut__arc wc-donut__arc--action" cx="42" cy="42" r="32" fill="none" stroke="#c0392b" stroke-width="11" stroke-dasharray="17 184" stroke-linecap="round" transform="rotate(-90 42 42)" stroke-dashoffset="-185"/>
+				<text class="wc-donut__center-text" x="42" y="46" text-anchor="middle" id="${fragmentEntryLinkNamespace}-donut-total">47</text>
+			</svg>
+			<div class="wc-donut__legend">
+				<div class="wc-donut__legend-row">
+					<div class="wc-donut__legend-dot" style="background:#0071e3"></div>
+					<span id="${fragmentEntryLinkNamespace}-legend-active">Active (32)</span>
+				</div>
+				<div class="wc-donut__legend-row">
+					<div class="wc-donut__legend-dot" style="background:#b45309"></div>
+					<span id="${fragmentEntryLinkNamespace}-legend-renewing">Renewing (9)</span>
+				</div>
+				<div class="wc-donut__legend-row">
+					<div class="wc-donut__legend-dot" style="background:#c0392b"></div>
+					<span id="${fragmentEntryLinkNamespace}-legend-action">Action needed (6)</span>
+				</div>
+			</div>
+		</div>
+		<div class="wc-donut__stats">
+			<div class="wc-donut__stat">
+				<div class="wc-donut__stat-label">Loss ratio</div>
+				<div class="wc-donut__stat-val wc-donut__stat-val--green" id="${fragmentEntryLinkNamespace}-loss-ratio">54.2%</div>
+			</div>
+			<div class="wc-donut__stat">
+				<div class="wc-donut__stat-label">Retention</div>
+				<div class="wc-donut__stat-val wc-donut__stat-val--blue" id="${fragmentEntryLinkNamespace}-retention">91%</div>
+			</div>
+		</div>
+	</div>
+</div>
