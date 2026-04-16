@@ -302,7 +302,11 @@
           var selectedClass = isSelected ? ' fl-loan-item--selected' : '';
           return '<div class="fl-loan-item' + selectedClass + '" data-uid="' + c.uid + '">' +
             '<div class="fl-loan-item__top">' +
-              '<div><div class="fl-loan-item__id">' + c.id + '</div><div class="fl-loan-item__title">' + c.title + '</div></div>' +
+              '<div>' +
+                '<div class="fl-loan-item__id">' + c.id + '</div>' +
+                '<div class="fl-loan-item__title">' + c.title + '</div>' +
+                '<div class="fl-loan-item__applicant">' + c.applicant + '</div>' +
+              '</div>' +
               '<span class="fl-tag fl-tag--' + (c.status || 'review') + '">' + c.statusLabel + '</span>' +
             '</div>' +
             '<div class="fl-loan-item__meta"><span>Submitted ' + c.filed + '</span> \u00b7 <span>' + c.amount + '</span></div>' +
