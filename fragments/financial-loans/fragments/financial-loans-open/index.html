@@ -1,0 +1,117 @@
+<div class="fl-wrap" id="${fragmentEntryLinkNamespace}-open">
+  <div class="fl-grid">
+
+    <div class="fl-main">
+
+      <div class="fl-card">
+        <div class="fl-card-head">
+          <span class="fl-card-title">Loan Applications</span>
+          <span class="fl-tag fl-tag--action" id="${fragmentEntryLinkNamespace}-open-count-tag">—</span>
+        </div>
+        <div class="fl-toolbar">
+          <div class="fl-search">
+            <svg class="fl-search-icon" viewBox="0 0 20 20" fill="currentColor">
+              <path fill-rule="evenodd" d="M8 4a4 4 0 100 8 4 4 0 000-8zM2 8a6 6 0 1110.89 3.476l4.817 4.817a1 1 0 01-1.414 1.414l-4.816-4.816A6 6 0 012 8z" clip-rule="evenodd" />
+            </svg>
+            <input type="text" placeholder="Search by ID or type..." id="${fragmentEntryLinkNamespace}-search-input">
+          </div>
+          <select id="${fragmentEntryLinkNamespace}-filter-select" class="fl-filter">
+            <option value="all">All Statuses</option>
+            <option value="Submitted">Submitted</option>
+            <option value="Underwriting">Underwriting</option>
+            <option value="Approved">Approved</option>
+            <option value="Active">Active</option>
+          </select>
+        </div>
+        <div id="${fragmentEntryLinkNamespace}-loans-list"></div>
+        <div class="fl-pagination" id="${fragmentEntryLinkNamespace}-pagination">
+          <button class="fl-pag-btn" id="${fragmentEntryLinkNamespace}-pag-prev" disabled>
+            <svg width="12" height="12" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M12.707 5.293a1 1 0 010 1.414L9.414 10l3.293 3.293a1 1 0 01-1.414 1.414l-4-4a1 1 0 010-1.414l4-4a1 1 0 011.414 0z" clip-rule="evenodd" /></svg>
+          </button>
+          <span class="fl-pag-info" id="${fragmentEntryLinkNamespace}-pag-info">Page 1 of 1</span>
+          <button class="fl-pag-btn" id="${fragmentEntryLinkNamespace}-pag-next" disabled>
+            <svg width="12" height="12" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd" /></svg>
+          </button>
+        </div>
+      </div>
+
+      <div class="fl-card" id="${fragmentEntryLinkNamespace}-detail-card">
+        <div class="fl-card-head">
+          <span class="fl-card-title" id="${fragmentEntryLinkNamespace}-detail-title">Application Status</span>
+          <span class="fl-tag fl-tag--api">Financial Objects API</span>
+        </div>
+
+        <div class="fl-action-banner" id="${fragmentEntryLinkNamespace}-action-banner">
+          <div class="fl-action-banner__title">
+            <svg width="14" height="14" viewBox="0 0 14 14" fill="none" style="flex-shrink:0">
+              <circle cx="7" cy="7" r="6" stroke="#854F0B" stroke-width="1.2"/>
+              <line x1="7" y1="4" x2="7" y2="7.5" stroke="#854F0B" stroke-width="1.3" stroke-linecap="round"/>
+              <circle cx="7" cy="9.5" r="0.7" fill="#854F0B"/>
+            </svg>
+            <span id="${fragmentEntryLinkNamespace}-banner-title">Action required</span>
+          </div>
+          <div class="fl-action-banner__body" id="${fragmentEntryLinkNamespace}-banner-body">—</div>
+        </div>
+
+        <div class="fl-timeline" id="${fragmentEntryLinkNamespace}-timeline"></div>
+
+        <div class="fl-upload-zone" id="${fragmentEntryLinkNamespace}-upload-zone">
+          <div class="fl-upload-zone__icon">
+            <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+              <path d="M10 14V5M10 5L7 8M10 5L13 8" stroke="#6b7280" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M3 15V17H17V15" stroke="#6b7280" stroke-width="1.4" stroke-linecap="round"/>
+            </svg>
+          </div>
+          <div class="fl-upload-zone__title" id="${fragmentEntryLinkNamespace}-upload-title">Upload required document</div>
+          <div class="fl-upload-zone__sub" id="${fragmentEntryLinkNamespace}-upload-sub">Click to select PDF or image &middot; Max 10 MB</div>
+          <button class="fl-upload-zone__btn" id="${fragmentEntryLinkNamespace}-upload-btn">Submit document</button>
+        </div>
+        <div class="fl-upload-success" id="${fragmentEntryLinkNamespace}-upload-success">
+          <strong>Document submitted.</strong> Your loan officer will be notified and will resume review within 1 business day.
+        </div>
+
+      </div>
+
+      <div class="fl-card fl-card--empty" id="${fragmentEntryLinkNamespace}-empty-card">
+        <div class="fl-empty">
+          <div class="fl-empty__icon">
+            <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+              <path d="M4 10L8.5 14.5L16 6" stroke="#1D9E75" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </div>
+          <div class="fl-empty__title">No active loan applications</div>
+          <div class="fl-empty__sub">You don't have any pending loan requests. You can apply for a new loan in the "Apply" tab.</div>
+          <button class="fl-empty__btn" onclick="Liferay.fire('fl:tab-request',{tab:'apply'})">Start New Application</button>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="fl-sidebar" id="${fragmentEntryLinkNamespace}-sidebar">
+      <div class="fl-side-card">
+        <div class="fl-side-label">Loan Officer</div>
+        <div class="fl-contact-row">
+          <div class="fl-contact-avatar" id="${fragmentEntryLinkNamespace}-adj-avatar">JS</div>
+          <div>
+            <div class="fl-contact-name" id="${fragmentEntryLinkNamespace}-officer-name">—</div>
+            <div class="fl-contact-role">Senior Loan Officer &mdash; Pillar Bank</div>
+          </div>
+        </div>
+        <div class="fl-contact-detail" id="${fragmentEntryLinkNamespace}-officer-phone">—</div>
+        <div class="fl-contact-detail fl-contact-detail--link" id="${fragmentEntryLinkNamespace}-officer-email">—</div>
+        <div class="fl-contact-note">Response time: 1 business day</div>
+      </div>
+
+      <div class="fl-side-card">
+        <div class="fl-side-label">Loan Details</div>
+        <div id="${fragmentEntryLinkNamespace}-loan-details"></div>
+      </div>
+
+      <div class="fl-side-card">
+        <div class="fl-side-label">Supporting Documents</div>
+        <div id="${fragmentEntryLinkNamespace}-loan-docs"></div>
+      </div>
+    </div>
+
+  </div>
+</div>
