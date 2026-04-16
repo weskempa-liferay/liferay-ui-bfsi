@@ -13,7 +13,7 @@
 
   var state = {
     loans: [],
-    selectedIdx: 0,
+    selectedIdx: -1,
     loading: false,
     searchQuery: '',
     statusFilter: 'all',
@@ -38,31 +38,49 @@
     'Credit Analysis',
     'Underwriting',
     'Approved',
+    'Denied',
     'Funding',
     'Active'
   ];
 
   function mapApiLoan(item) {
-    var rawStatus = (item.status && item.status.label) || 'Submitted';
+    var rawStatus = item.applicationStatus || (item.status && item.status.label) || 'Submitted';
     var currentIndex = STATUS_ORDER.indexOf(rawStatus);
+    
+    // Improved matching for specific variants
     if (currentIndex === -1) {
-       // Fallback logic for common variations
-       if (rawStatus.toLowerCase().includes('approve')) currentIndex = 3;
-       else if (rawStatus.toLowerCase().includes('review')) currentIndex = 1;
+       var lowStatus = rawStatus.toLowerCase();
+       if (lowStatus.includes('approved')) currentIndex = 3;
+       else if (lowStatus.includes('denied')) currentIndex = 4;
+       else if (lowStatus.includes('review') || lowStatus.includes('credit')) currentIndex = 1;
+       else if (lowStatus.includes('underwrit')) currentIndex = 2;
+       else if (lowStatus.includes('fund')) currentIndex = 5;
        else currentIndex = 0;
     }
 
     // Logic for banners/actions (simulated for demo)
     var statusMode = rawStatus === 'Documentation Needed' ? 'action' : 'review';
+    if (rawStatus === 'Denied') statusMode = 'action'; // Mark denied as something needing attention/different style
 
     var timeline = STATUS_ORDER.map(function(statusName, index) {
+      // Logic for mutually exclusive paths: Approved vs Denied
+      if (rawStatus === 'Denied' && statusName === 'Approved') return null;
+      if (rawStatus === 'Approved' && statusName === 'Denied') return null;
+      
+      // If we are past the decision point (Approved, Funding, Active), don't show Denied
+      var currentStatusIdx = STATUS_ORDER.indexOf(rawStatus);
+      if ((currentStatusIdx === 3 || currentStatusIdx > 4) && statusName === 'Denied') return null;
+      
+      // If we are Denied, don't show future steps
+      if (rawStatus === 'Denied' && (statusName === 'Funding' || statusName === 'Active')) return null;
+      
       var stepState = 'pending';
       var desc = 'This phase is scheduled.';
       
-      if (index < currentIndex) {
+      if (index < currentStatusIdx) {
         stepState = 'done';
         desc = 'This step has been successfully completed.';
-      } else if (index === currentIndex) {
+      } else if (index === currentStatusIdx) {
         stepState = statusMode === 'action' ? 'action' : 'active';
         desc = 'Our team is currently processing this stage.';
       }
@@ -72,6 +90,7 @@
       if (statusName === 'Credit Analysis') desc = 'Reviewing credit history and financial standing.';
       if (statusName === 'Underwriting') desc = 'Final assessment of loan risk and terms.';
       if (statusName === 'Approved') desc = 'Loan has been green-lit. Final docs being prepared.';
+      if (statusName === 'Denied') desc = 'Application was not approved based on current criteria. Check reviewer notes for details.';
       if (statusName === 'Funding') desc = 'Transferring funds to your designated account.';
       if (statusName === 'Active') desc = 'Loan is active and on repayment schedule.';
 
@@ -81,7 +100,7 @@
         date: index <= currentIndex ? formatDate(item.dateCreated) : 'Upcoming',
         desc: desc
       };
-    });
+    }).filter(function(step) { return step !== null; }); // Remove skipped steps
 
     return {
       id: 'LN-' + (item.id || 'PENDING'),
@@ -90,17 +109,17 @@
       applicant: item.applicantFullName || 'Valued Customer',
       filed: formatDate(item.dateCreated),
       amount: formatCurrency(item.requestedAmount),
-      status: statusMode === 'action' ? 'action' : (rawStatus === 'Active' ? 'none' : 'review'),
-      statusLabel: rawStatus,
+      status: rawStatus === 'Denied' ? 'action' : (rawStatus === 'Active' ? 'none' : 'review'),
+      statusLabel: currentIndex !== -1 ? STATUS_ORDER[currentIndex] : rawStatus,
       loanType: item.loanType || 'Standard',
       annualIncome: formatCurrency(item.annualIncome),
       creditScore: item.creditScore || '—',
       term: (item.loanTermMonths || 12) + ' Months',
       interestRate: (item.interestRate || '0') + '%',
       officer: { name: 'Jordan Smith', phone: '(415) 555-0892', email: 'j.smith@pillarbank.com', initials: 'JS' },
-      bannerTitle: statusMode === 'action' ? 'Action required \u2014 Proof of income' : null,
-      bannerBody: statusMode === 'action' ? 'Your loan officer needs a recent pay stub or W2 to finalize the underwriting process.' : null,
-      uploadLabel: statusMode === 'action' ? 'Upload Proof of Income' : null,
+      bannerTitle: rawStatus === 'Denied' ? 'Application Denied' : (statusMode === 'action' ? 'Action required \u2014 Proof of income' : null),
+      bannerBody: rawStatus === 'Denied' ? 'We regret to inform you that we cannot approve your application at this time.' : (statusMode === 'action' ? 'Your loan officer needs a recent pay stub or W2.' : null),
+      uploadLabel: statusMode === 'action' && rawStatus !== 'Denied' ? 'Upload Proof of Income' : null,
       timeline: timeline,
       docs: [
         { name: 'Loan Agreement',   meta: 'Ready for signature',  state: 'sign'    },
@@ -261,9 +280,16 @@
       return;
     }
 
-    if (detailCard) detailCard.style.display = '';
+    // Hide details if no selection
+    if (state.selectedIdx === -1) {
+      if (detailCard) detailCard.style.display = 'none';
+      if (sidebarEl)  sidebarEl.style.display = 'none';
+    } else {
+      if (detailCard) detailCard.style.display = '';
+      if (sidebarEl)  sidebarEl.style.display = '';
+    }
+
     if (emptyCard)  emptyCard.className = 'fl-card fl-card--empty';
-    if (sidebarEl)  sidebarEl.style.display = '';
     if (paginationEl) paginationEl.style.display = 'flex';
 
     if (listEl) {
@@ -290,7 +316,9 @@
     el('pag-prev').disabled = state.page === 1;
     el('pag-next').disabled = state.page === totalPages;
 
-    renderLoan(loans[state.selectedIdx]);
+    if (state.selectedIdx !== -1) {
+      renderLoan(loans[state.selectedIdx]);
+    }
   }
 
   // Event Delegation for Loan Clicks
@@ -329,6 +357,7 @@
       searchInput.addEventListener('input', function(e) {
         state.searchQuery = e.target.value;
         state.page = 1; // Reset to first page on search
+        state.selectedIdx = -1; // Reset selection on search
         render();
       });
     }
@@ -338,6 +367,7 @@
       filterSelect.addEventListener('change', function(e) {
         state.statusFilter = e.target.value;
         state.page = 1; // Reset to first page on filter
+        state.selectedIdx = -1; // Reset selection on filter
         render();
       });
     }
