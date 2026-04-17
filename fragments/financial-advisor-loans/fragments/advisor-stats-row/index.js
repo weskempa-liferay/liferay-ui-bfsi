@@ -21,7 +21,7 @@
     .then(data => {
       const items = data.items || [];
       
-      const activeCount = items.filter(i => i.applicationStatus === 'Active').length;
+      const activeCount = items.filter(i => i.applicationStatus === 'Approved').length;
       const totalVolume = items.reduce((sum, i) => sum + (i.requestedAmount || 0), 0);
       const pendingCount = items.filter(i => i.applicationStatus === 'Underwriting').length;
       const priorityCount = items.filter(i => i.applicationStatus === 'Documentation Needed' || i.applicationStatus === 'Denied').length;

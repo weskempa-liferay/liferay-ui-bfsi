@@ -103,7 +103,7 @@
     }).filter(function(step) { return step !== null; }); // Remove skipped steps
 
     return {
-      id: 'LN-' + (item.id || 'PENDING'),
+      id: 'LN-' + (item.applicationNumber || item.id || 'PENDING'),
       uid: String(item.id || Math.random().toString(36).substr(2, 9)), // Force string for comparison
       title: (item.loanType || 'Personal') + ' Loan Application',
       applicant: item.applicantFullName || 'Valued Customer',

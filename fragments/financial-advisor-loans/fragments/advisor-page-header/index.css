@@ -3,7 +3,7 @@
   align-items: flex-start;
   justify-content: space-between;
   padding: 24px 32px 18px;
-  background: #f1f4f9;
+  background: transparent;
 }
 
 .al-page-header__greeting {
