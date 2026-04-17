@@ -1,0 +1,35 @@
+{
+  "fieldSets": [
+    {
+      "fields": [
+        {
+          "name": "iconType",
+          "label": "Card Icon Type",
+          "type": "select",
+          "dataType": "string",
+          "defaultValue": "basic",
+          "typeOptions": {
+            "validValues": [
+              { "value": "basic", "label": "Basic Card" },
+              { "value": "rewards", "label": "Rewards Card" },
+              { "value": "student", "label": "Student Card" }
+            ]
+          }
+        },
+        {
+          "name": "cardStyle",
+          "label": "Card Style",
+          "type": "select",
+          "dataType": "string",
+          "defaultValue": "standard",
+          "typeOptions": {
+            "validValues": [
+              { "value": "standard", "label": "Standard" },
+              { "value": "premium", "label": "Premium (Glow)" }
+            ]
+          }
+        }
+      ]
+    }
+  ]
+}

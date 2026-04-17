@@ -1,0 +1,15 @@
+{
+  "fieldSets": [
+    {
+      "fields": [
+        {
+          "dataType": "string",
+          "defaultValue": "40",
+          "label": "Overlay Opacity",
+          "name": "overlayOpacity",
+          "type": "text"
+        }
+      ]
+    }
+  ]
+}

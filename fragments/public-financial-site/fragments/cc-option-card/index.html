@@ -1,0 +1,59 @@
+<div class="pf-cc-option pf-cc-option--${configuration.cardStyle}">
+  <div class="pf-cc-option__icon-wrapper">
+    [#if configuration.iconType == "basic"]
+    <svg class="pf-cc-option__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+      <rect x="2" y="5" width="20" height="14" rx="2" stroke-width="1.5" />
+      <line x1="2" y1="10" x2="22" y2="10" stroke-width="1.5" />
+      <rect x="5" y="14" width="3" height="2" rx="0.5" stroke-width="1.5" />
+    </svg>
+    [#elseif configuration.iconType == "rewards"]
+    <svg class="pf-cc-option__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+      <rect x="2" y="5" width="20" height="14" rx="2" stroke-width="1.5" />
+      <path d="M12 11L13.5 14H16.5L14 16L15 19L12 17L9 19L10 16L7.5 14H10.5L12 11Z" fill="currentColor" opacity="0.2"
+        stroke-width="1.5" />
+      <path d="M12 11L13.5 14H16.5L14 16L15 19L12 17L9 19L10 16L7.5 14H10.5L12 11Z" stroke-width="1.5" />
+    </svg>
+    [#else]
+    <svg class="pf-cc-option__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+      <rect x="2" y="5" width="20" height="14" rx="2" stroke-width="1.5" />
+      <circle cx="12" cy="12" r="3" stroke-width="1.5" />
+      <path d="M12 9V5" stroke-width="1.5" />
+    </svg>
+    [/#if]
+  </div>
+
+  <h2 class="pf-cc-option__title" data-lfr-editable-id="title" data-lfr-editable-type="text">
+    Credit Card Name
+  </h2>
+
+  <p class="pf-cc-option__subtitle" data-lfr-editable-id="subtitle" data-lfr-editable-type="text">
+    Perfect for your everyday spending needs.
+  </p>
+
+  <div class="pf-cc-option__features">
+    <div class="pf-cc-option__features-label">Features</div>
+    <div class="pf-cc-option__features-grid">
+      <lfr-drop-zone></lfr-drop-zone>
+      <!--
+      <div class="pf-cc-option__feature-item">
+        <span class="pf-cc-option__feature-text" data-lfr-editable-id="feature-1" data-lfr-editable-type="text">Low Interest Rates</span>
+      </div>
+      <div class="pf-cc-option__feature-item">
+        <span class="pf-cc-option__feature-text" data-lfr-editable-id="feature-2" data-lfr-editable-type="text">No Annual Fees</span>
+      </div>
+      <div class="pf-cc-option__feature-item">
+        <span class="pf-cc-option__feature-text" data-lfr-editable-id="feature-3" data-lfr-editable-type="text">Flexible Payments</span>
+      </div>
+      <div class="pf-cc-option__feature-item">
+        <span class="pf-cc-option__feature-text" data-lfr-editable-id="feature-4" data-lfr-editable-type="text">24/7 Support</span>
+      </div>
+      -->
+    </div>
+  </div>
+
+  <div class="pf-cc-option__footer">
+    <a class="pf-cc-option__button" data-lfr-editable-id="link" data-lfr-editable-type="link">
+      Learn more
+    </a>
+  </div>
+</div>

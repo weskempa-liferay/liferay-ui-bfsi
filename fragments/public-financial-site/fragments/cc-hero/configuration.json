@@ -1,0 +1,21 @@
+{
+  "fieldSets": [
+    {
+      "fields": [
+        {
+          "name": "theme",
+          "label": "Theme",
+          "type": "select",
+          "dataType": "string",
+          "defaultValue": "light",
+          "typeOptions": {
+            "validValues": [
+              { "value": "light", "label": "Light" },
+              { "value": "dark", "label": "Dark (Modern)" }
+            ]
+          }
+        }
+      ]
+    }
+  ]
+}

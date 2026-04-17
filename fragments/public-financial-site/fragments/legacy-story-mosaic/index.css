@@ -1,0 +1,115 @@
+.pf-legacy {
+  padding: 120px 20px;
+  background: white;
+  overflow: hidden;
+}
+
+.pf-legacy__container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  gap: 80px;
+}
+
+.pf-legacy__visual {
+  position: relative;
+}
+
+.pf-legacy__img-main {
+  width: 100%;
+  border-radius: 32px;
+  overflow: hidden;
+  box-shadow: 0 40px 80px rgba(0, 0, 0, 0.1);
+  transform: rotate(-2deg);
+  transition: transform 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+.pf-legacy:hover .pf-legacy__img-main {
+  transform: rotate(0deg) scale(1.02);
+}
+
+.pf-legacy__img-main img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.pf-legacy__stats {
+  position: absolute;
+  bottom: -40px;
+  right: -20px;
+  z-index: 10;
+}
+
+.pf-legacy__stat-card {
+  background: #0ea5e9;
+  color: white;
+  padding: 32px;
+  border-radius: 24px;
+  box-shadow: 0 20px 40px rgba(14, 165, 233, 0.3);
+  text-align: center;
+}
+
+.pf-legacy__stat-num {
+  display: block;
+  font-size: 48px;
+  font-weight: 800;
+  line-height: 1;
+  margin-bottom: 8px;
+}
+
+.pf-legacy__stat-label {
+  font-size: 14px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  opacity: 0.9;
+}
+
+.pf-legacy__content {
+  text-align: left;
+}
+
+.pf-legacy__pre {
+  font-size: 14px;
+  font-weight: 800;
+  color: #0ea5e9;
+  letter-spacing: 0.2em;
+  margin-bottom: 24px;
+}
+
+.pf-legacy__title {
+  font-size: 48px;
+  font-weight: 800;
+  color: #1e293b;
+  line-height: 1.1;
+  margin-bottom: 32px;
+}
+
+.pf-legacy__text {
+  font-size: 17px;
+  line-height: 1.8;
+  color: #64748b;
+  margin-bottom: 24px;
+}
+
+.pf-legacy__btn {
+  font-size: 16px;
+  font-weight: 700;
+  color: #0ea5e9;
+  text-decoration: none;
+  transition: all 0.2s;
+}
+
+.pf-legacy__btn:hover {
+  text-decoration: underline;
+}
+
+@media (max-width: 968px) {
+  .pf-legacy__container { grid-template-columns: 1fr; gap: 60px; }
+  .pf-legacy__stats { bottom: -20px; right: 20px; }
+  .pf-legacy__title { font-size: 36px; }
+}
