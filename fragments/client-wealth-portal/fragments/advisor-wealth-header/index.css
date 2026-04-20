@@ -1,0 +1,60 @@
+.wp-adv-head {
+  padding: 40px 20px 20px;
+  max-width: 1280px;
+  margin: 0 auto;
+}
+
+.wp-adv-head__container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 2px solid #f1f5f9;
+  padding-bottom: 32px;
+}
+
+.wp-adv-head__title {
+  font-size: 28px;
+  font-weight: 800;
+  color: #1e293b;
+  margin: 0 0 4px;
+}
+
+.wp-adv-head__sub {
+  font-size: 14px;
+  color: #64748b;
+  margin: 0;
+}
+
+.wp-adv-head__stats {
+  display: flex;
+  gap: 40px;
+}
+
+.wp-adv-stat {
+  display: flex;
+  flex-direction: column;
+  text-align: right;
+}
+
+.wp-adv-stat__label {
+  font-size: 11px;
+  font-weight: 700;
+  color: #94a3b8;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  margin-bottom: 8px;
+}
+
+.wp-adv-stat__val {
+  font-size: 24px;
+  font-weight: 700;
+  color: #1e293b;
+}
+
+.wp-adv-stat__val--green { color: #10b981; }
+.wp-adv-stat__val--red { color: #ef4444; }
+
+@media (max-width: 768px) {
+  .wp-adv-head__container { flex-direction: column; align-items: flex-start; gap: 32px; }
+  .wp-adv-stat { text-align: left; }
+}

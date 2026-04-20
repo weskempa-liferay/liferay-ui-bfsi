@@ -1,0 +1,169 @@
+.wp-list {
+  max-width: 1280px;
+  margin: 0 auto;
+}
+
+.wp-list__container {
+  background: white;
+  border-radius: 24px;
+  border: 1px solid #e2e8f0;
+  overflow: hidden;
+}
+
+.wp-list__header {
+  padding: 32px;
+  border-bottom: 1px solid #f1f5f9;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.wp-list__title {
+  font-size: 20px;
+  font-weight: 700;
+  color: #1e293b;
+  margin: 0;
+}
+
+.wp-list__tabs {
+  display: flex;
+  gap: 8px;
+  background: #f8fafc;
+  padding: 4px;
+  border-radius: 12px;
+}
+
+.wp-list__tab {
+  padding: 8px 16px;
+  font-size: 13px;
+  font-weight: 600;
+  color: #64748b;
+  cursor: pointer;
+  border-radius: 8px;
+  transition: all 0.2s;
+}
+
+.wp-list__tab--active {
+  background: white;
+  color: #0ea5e9;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.wp-list__rows {
+  padding: 8px 0;
+}
+
+.wp-row {
+  display: flex;
+  align-items: center;
+  padding: 24px 32px;
+  border-bottom: 1px solid #f1f5f9;
+  transition: background 0.2s;
+}
+
+.wp-row:last-child {
+  border-bottom: none;
+}
+
+.wp-row:hover {
+  background: #fdfdfd;
+}
+
+.wp-row__icon {
+  width: 48px;
+  height: 48px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 24px;
+}
+
+.wp-row__icon svg {
+  width: 24px;
+  height: 24px;
+}
+
+.wp-row__icon--inv {
+  background: #f0f9ff;
+  color: #0ea5e9;
+}
+
+.wp-row__icon--bank {
+  background: #f0fdf4;
+  color: #10b981;
+}
+
+.wp-row__icon--ins {
+  background: #f5f3ff;
+  color: #8b5cf6;
+}
+
+.wp-row__details {
+  flex: 1;
+}
+
+.wp-row__name {
+  font-size: 16px;
+  font-weight: 700;
+  color: #1e293b;
+  margin-bottom: 4px;
+}
+
+.wp-row__meta {
+  font-size: 13px;
+  color: #94a3b8;
+}
+
+.wp-row__stat {
+  text-align: right;
+  margin: 0 40px;
+}
+
+.wp-row__val {
+  font-size: 18px;
+  font-weight: 700;
+  color: #1e293b;
+  margin-bottom: 4px;
+}
+
+.wp-row__change {
+  font-size: 12px;
+  font-weight: 600;
+  color: #10b981;
+}
+
+.wp-row__btn {
+  font-size: 13px;
+  font-weight: 700;
+  color: #0ea5e9;
+  text-decoration: none;
+  padding: 8px 20px;
+  border: 1.5px solid #e0f2fe;
+  border-radius: 8px;
+  transition: all 0.2s;
+}
+
+.wp-row__btn:hover {
+  background: #0ea5e9;
+  color: white;
+  border-color: #0ea5e9;
+}
+
+@media (max-width: 768px) {
+  .wp-row {
+    flex-wrap: wrap;
+  }
+
+  .wp-row__stat {
+    width: 100%;
+    text-align: left;
+    margin: 20px 0 0 72px;
+  }
+
+  .wp-list__header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 20px;
+  }
+}

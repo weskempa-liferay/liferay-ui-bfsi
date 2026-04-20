@@ -1,0 +1,97 @@
+.wp-ranking {
+  padding: 24px 20px 60px;
+  max-width: 1280px;
+  margin: 0 auto;
+}
+
+.wp-ranking__container {
+  background: white;
+  border-radius: 24px;
+  border: 1px solid #e2e8f0;
+  overflow: hidden;
+}
+
+.wp-ranking__head {
+  padding: 32px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #f1f5f9;
+}
+
+.wp-ranking__title {
+  font-size: 20px;
+  font-weight: 700;
+  color: #1e293b;
+  margin: 0;
+}
+
+.wp-ranking__filter {
+  font-size: 11px;
+  font-weight: 700;
+  color: #10b981;
+  background: #ecfdf5;
+  padding: 6px 12px;
+  border-radius: 6px;
+  text-transform: uppercase;
+}
+
+.wp-ranking-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.wp-ranking-table th {
+  padding: 20px 32px;
+  text-align: left;
+  font-size: 11px;
+  font-weight: 700;
+  color: #94a3b8;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  background: #fdfdfd;
+}
+
+.wp-ranking-table td {
+  padding: 24px 32px;
+  border-bottom: 1px solid #f1f5f9;
+}
+
+.cl-name {
+  font-size: 15px;
+  font-weight: 700;
+  color: #1e293b;
+  margin-bottom: 2px;
+}
+
+.cl-meta {
+  font-size: 12px;
+  color: #94a3b8;
+}
+
+.cl-val {
+  font-size: 14px;
+  color: #64748b;
+  font-weight: 500;
+}
+
+.cl-total {
+  font-size: 15px;
+  font-weight: 800;
+  color: #0ea5e9;
+}
+
+.cl-btn {
+  font-size: 13px;
+  font-weight: 600;
+  color: #0ea5e9;
+  text-decoration: none;
+}
+
+.wp-ranking-table tr:hover {
+  background: #fcfcfc;
+}
+
+@media (max-width: 1024px) {
+  .wp-ranking__scroll { overflow-x: auto; }
+}

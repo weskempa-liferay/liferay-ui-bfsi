@@ -1,0 +1,65 @@
+.wp-actions {
+  padding: 0 20px 48px;
+  max-width: 1280px;
+  margin: 0 auto;
+}
+
+.wp-actions__container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+
+.wp-action-card {
+  background: white;
+  padding: 32px;
+  border-radius: 20px;
+  border: 1px solid #e2e8f0;
+  text-align: center;
+  transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+  cursor: pointer;
+}
+
+.wp-action-card:hover {
+  border-color: #0ea5e9;
+  background: #f8fafc;
+  transform: translateY(-4px);
+}
+
+.wp-action-card__icon {
+  width: 56px;
+  height: 56px;
+  border-radius: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 20px;
+}
+
+.wp-action-card__icon svg { width: 28px; height: 28px; }
+
+.wp-action-card__icon--blue { background: #f0f9ff; color: #0ea5e9; }
+.wp-action-card__icon--green { background: #ecfdf5; color: #10b981; }
+.wp-action-card__icon--purple { background: #f5f3ff; color: #8b5cf6; }
+.wp-action-card__icon--amber { background: #fffbeb; color: #f59e0b; }
+
+.wp-action-card__title {
+  font-size: 16px;
+  font-weight: 700;
+  color: #1e293b;
+  margin-bottom: 8px;
+}
+
+.wp-action-card__desc {
+  font-size: 13px;
+  color: #64748b;
+  line-height: 1.5;
+}
+
+@media (max-width: 1024px) {
+  .wp-actions__container { grid-template-columns: 1fr 1fr; }
+}
+
+@media (max-width: 640px) {
+  .wp-actions__container { grid-template-columns: 1fr; }
+}

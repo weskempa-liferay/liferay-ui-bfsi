@@ -1,0 +1,116 @@
+.wp-stats {
+  padding: 32px 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.wp-stats__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin-bottom: 24px;
+}
+
+.wp-stats__welcome {
+  font-size: 13px;
+  color: #64748b;
+  display: block;
+  margin-bottom: 2px;
+}
+
+.wp-stats__name {
+  font-size: 24px;
+  font-weight: 800;
+  color: #1e293b;
+  margin: 0;
+}
+
+.wp-stats__tag {
+  font-size: 10px;
+  font-weight: 700;
+  color: #0ea5e9;
+  background: #f0f9ff;
+  padding: 4px 10px;
+  border-radius: 99px;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.wp-stats__grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+}
+
+.wp-card {
+  background: white;
+  padding: 20px;
+  border-radius: 16px;
+  border: 1px solid #e2e8f0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.wp-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.04);
+}
+
+.wp-card--main {
+  background: #0f172a;
+  border: none;
+  color: white;
+}
+
+.wp-card__label {
+  font-size: 10px;
+  font-weight: 700;
+  color: #64748b;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-bottom: 8px;
+}
+
+.wp-card--main .wp-card__label {
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.wp-card__value {
+  font-size: 20px;
+  font-weight: 800;
+  color: #1e293b;
+  margin-bottom: 4px;
+  line-height: 1;
+}
+
+.wp-card--main .wp-card__value {
+  color: white;
+  font-size: 24px;
+}
+
+.wp-card__sub {
+  font-size: 14px;
+  color: #94a3b8;
+}
+
+.wp-card__trend {
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.wp-card__trend--up {
+  color: #10b981;
+}
+
+@media (max-width: 1024px) {
+  .wp-stats__grid { grid-template-columns: 1fr 1fr; }
+  .wp-card--main { grid-column: span 2; }
+}
+
+@media (max-width: 640px) {
+  .wp-stats__grid { grid-template-columns: 1fr; }
+  .wp-card--main { grid-column: span 1; }
+  .wp-stats__header { flex-direction: column; align-items: flex-start; gap: 20px; }
+}

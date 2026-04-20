@@ -1,0 +1,134 @@
+.wp-chart {
+  max-width: 1280px;
+  margin: 0 auto;
+}
+
+.wp-chart__container {
+  background: white;
+  border-radius: 24px;
+  border: 1px solid #e2e8f0;
+  padding: 40px;
+  display: flex;
+  align-items: center;
+  gap: 60px;
+}
+
+.wp-chart__visual {
+  flex-shrink: 0;
+}
+
+.wp-donut {
+  width: 240px;
+  height: 240px;
+  border-radius: 50%;
+  background: conic-gradient(#0ea5e9 0% 75%,
+      #8b5cf6 75% 93%,
+      #10b981 93% 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+}
+
+.wp-donut::before {
+  content: '';
+  position: absolute;
+  inset: 20px;
+  background: white;
+  border-radius: 50%;
+  box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.wp-donut__hole {
+  position: relative;
+  z-index: 10;
+  text-align: center;
+}
+
+.wp-donut__val {
+  font-size: 11px;
+  font-weight: 700;
+  color: #94a3b8;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  margin-bottom: 4px;
+}
+
+.wp-donut__num {
+  font-size: 32px;
+  font-weight: 800;
+  color: #1e293b;
+}
+
+.wp-chart__content {
+  flex: 1;
+}
+
+.wp-chart__title {
+  font-size: 24px;
+  font-weight: 800;
+  color: #1e293b;
+  margin: 0 0 12px;
+}
+
+.wp-chart__desc {
+  font-size: 15px;
+  line-height: 1.6;
+  color: #64748b;
+  margin-bottom: 32px;
+}
+
+.wp-legend {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.wp-leg {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.wp-leg__dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 3px;
+}
+
+.wp-leg__dot--inv {
+  background: #0ea5e9;
+}
+
+.wp-leg__dot--ins {
+  background: #8b5cf6;
+}
+
+.wp-leg__dot--bank {
+  background: #10b981;
+}
+
+.wp-leg__label {
+  font-size: 14px;
+  font-weight: 600;
+  color: #475569;
+  flex: 1;
+}
+
+.wp-leg__val {
+  font-size: 14px;
+  font-weight: 700;
+  color: #1e293b;
+}
+
+@media (max-width: 768px) {
+  .wp-chart__container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .wp-leg {
+    justify-content: center;
+  }
+}

@@ -244,7 +244,8 @@
     var filtered = loans.filter(function(l) {
       var matchesSearch = !state.searchQuery || 
         l.id.toLowerCase().includes(state.searchQuery.toLowerCase()) || 
-        l.title.toLowerCase().includes(state.searchQuery.toLowerCase());
+        l.title.toLowerCase().includes(state.searchQuery.toLowerCase()) ||
+        l.applicant.toLowerCase().includes(state.searchQuery.toLowerCase());
       
       var matchesStatus = state.statusFilter === 'all' || l.statusLabel === state.statusFilter;
       
@@ -309,7 +310,7 @@
               '</div>' +
               '<span class="fl-tag fl-tag--' + (c.status || 'review') + '">' + c.statusLabel + '</span>' +
             '</div>' +
-            '<div class="fl-loan-item__meta"><span>Submitted ' + c.filed + '</span> \u00b7 <span>' + c.amount + '</span></div>' +
+            '<div class="fl-loan-item__meta"><span>Submitted ' + c.filed + '</span> · <span>' + c.amount + '</span></div>' +
           '</div>';
         }).join('');
       }
