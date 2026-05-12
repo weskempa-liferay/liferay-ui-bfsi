@@ -1,0 +1,23 @@
+{
+  "fieldSets": [
+    {
+      "fields": [
+        {
+          "name": "bgTheme",
+          "label": "Background Theme",
+          "type": "select",
+          "dataType": "string",
+          "defaultValue": "blue",
+          "typeOptions": {
+            "validValues": [
+              { "value": "blue", "label": "Blue (Standard)" },
+              { "value": "teal", "label": "Teal (Accounts)" },
+              { "value": "indigo", "label": "Indigo (Loans)" },
+              { "value": "dark", "label": "Dark" }
+            ]
+          }
+        }
+      ]
+    }
+  ]
+}

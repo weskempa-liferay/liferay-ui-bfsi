@@ -59,6 +59,34 @@
 .pf-cc-option__icon {
   width: 32px;
   height: 32px;
+  display: none;
+}
+
+[data-icon-type="basic"] .pf-cc-option__icon--basic,
+[data-icon-type="rewards"] .pf-cc-option__icon--rewards,
+[data-icon-type="student"] .pf-cc-option__icon--student {
+  display: block;
+}
+
+.pf-cc-option--premium-glow {
+  border-color: #f59e0b;
+  box-shadow: 0 15px 35px rgba(245, 158, 11, 0.12);
+  background: linear-gradient(180deg, #ffffff 0%, #fffbeb 100%);
+}
+
+.pf-cc-option--premium-glow .pf-cc-option__icon-wrapper {
+  background: #fef3c7;
+  color: #d97706;
+}
+
+.pf-cc-option--premium-glow::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(90deg, #f59e0b, #fbbf24, #f59e0b);
 }
 
 .pf-cc-option__title {

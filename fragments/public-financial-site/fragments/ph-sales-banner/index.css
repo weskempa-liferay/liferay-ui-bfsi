@@ -1,0 +1,97 @@
+.ph-sales-banner {
+    padding: 60px 24px;
+    color: #ffffff;
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+    position: relative;
+    overflow: hidden;
+}
+
+.ph-sales-banner--blue { background: linear-gradient(135deg, #0ea5e9 0%, #2563eb 100%); }
+.ph-sales-banner--teal { background: linear-gradient(135deg, #0d9488 0%, #0f766e 100%); }
+.ph-sales-banner--indigo { background: linear-gradient(135deg, #6366f1 0%, #4f46e5 100%); }
+.ph-sales-banner--dark { background: #0f172a; }
+
+.ph-sales-banner__inner {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 40px;
+    position: relative;
+    z-index: 2;
+}
+
+.ph-sales-banner::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -10%;
+    width: 400px;
+    height: 400px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 50%;
+    z-index: 1;
+}
+
+.ph-sales-banner::after {
+    content: '';
+    position: absolute;
+    bottom: -30%;
+    right: -5%;
+    width: 300px;
+    height: 300px;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 50%;
+    z-index: 1;
+}
+
+.ph-sales-banner__title {
+    font-size: 32px;
+    font-weight: 800;
+    margin-bottom: 12px;
+    letter-spacing: -0.01em;
+}
+
+.ph-sales-banner__text {
+    font-size: 18px;
+    opacity: 0.9;
+    max-width: 700px;
+    margin: 0;
+}
+
+.ph-sales-banner__highlight {
+    font-weight: 700;
+    color: #fef08a; /* Soft yellow for highlighting on blue/teal/indigo */
+}
+
+.ph-sales-banner__btn {
+    display: inline-block;
+    padding: 16px 32px;
+    background: #ffffff;
+    color: #2563eb;
+    border-radius: 12px;
+    font-weight: 700;
+    font-size: 16px;
+    text-decoration: none;
+    transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+    white-space: nowrap;
+}
+
+.ph-sales-banner--teal .ph-sales-banner__btn { color: #0d9488; }
+.ph-sales-banner--indigo .ph-sales-banner__btn { color: #6366f1; }
+.ph-sales-banner--dark .ph-sales-banner__btn { color: #0f172a; }
+
+.ph-sales-banner__btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+    background: #f8fafc;
+    text-decoration: none;
+}
+
+@media (max-width: 992px) {
+    .ph-sales-banner__inner { flex-direction: column; text-align: center; }
+    .ph-sales-banner__title { font-size: 28px; }
+    .ph-sales-banner__text { font-size: 16px; }
+    .ph-sales-banner__btn { width: 100%; }
+}

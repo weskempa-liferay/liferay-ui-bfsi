@@ -11,7 +11,7 @@
           "typeOptions": {
             "validValues": [
               { "value": "standard", "label": "Standard" },
-              { "value": "premium", "label": "Premium (Glow)" }
+              { "value": "highlight", "label": "Highlight (Indigo)" }
             ]
           }
         }

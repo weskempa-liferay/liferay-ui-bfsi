@@ -1,0 +1,127 @@
+.ph-loan-option {
+    background: #ffffff;
+    border-radius: 24px;
+    padding: 48px 40px;
+    border: 1px solid rgba(226, 232, 240, 0.8);
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+    transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+}
+
+.ph-loan-option:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+    border-color: #e0e7ff;
+}
+
+.ph-loan-option--highlight {
+    background: #f5f3ff;
+    border-color: #ddd6fe;
+}
+
+.ph-loan-option__icon-wrapper {
+    width: 64px;
+    height: 64px;
+    background: #f5f3ff;
+    color: #6366f1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 16px;
+    margin-bottom: 32px;
+    transition: all 0.3s ease;
+}
+
+.ph-loan-option--highlight .ph-loan-option__icon-wrapper {
+    background: #6366f1;
+    color: #ffffff;
+}
+
+.ph-loan-option:hover .ph-loan-option__icon-wrapper {
+    transform: scale(1.1) rotate(5deg);
+}
+
+.ph-loan-option__icon {
+    width: 32px;
+    height: 32px;
+    display: none;
+}
+
+[data-icon-type="auto"] .ph-loan-option__icon--auto,
+[data-icon-type="home"] .ph-loan-option__icon--home,
+[data-icon-type="personal"] .ph-loan-option__icon--personal {
+    display: block;
+}
+
+.ph-loan-option__title {
+    font-size: 24px;
+    font-weight: 800;
+    color: #0f172a;
+    margin-bottom: 12px;
+    letter-spacing: -0.01em;
+}
+
+.ph-loan-option__subtitle {
+    font-size: 16px;
+    line-height: 1.6;
+    color: #475569;
+    margin-bottom: 32px;
+}
+
+.ph-loan-option__features {
+    margin-top: auto;
+    padding-top: 24px;
+    border-top: 1px solid #f1f5f9;
+}
+
+.ph-loan-option__features-label {
+    font-size: 12px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: #94a3b8;
+    margin-bottom: 20px;
+}
+
+.ph-loan-option__features-list {
+    min-height: 40px;
+}
+
+.ph-loan-option__footer {
+    margin-top: 40px;
+}
+
+.ph-loan-option__button {
+    display: inline-block;
+    width: 100%;
+    padding: 14px 28px;
+    background: #f8fafc;
+    color: #0f172a;
+    border: 1px solid #e2e8f0;
+    border-radius: 12px;
+    font-weight: 600;
+    text-align: center;
+    transition: all 0.2s ease;
+    text-decoration: none;
+}
+
+.ph-loan-option__button:hover {
+    background: #6366f1;
+    color: #ffffff;
+    border-color: #6366f1;
+    text-decoration: none;
+}
+
+.ph-loan-option--highlight .ph-loan-option__button {
+    background: #6366f1;
+    color: #ffffff;
+    border-color: #6366f1;
+}
+
+.ph-loan-option--highlight .ph-loan-option__button:hover {
+    background: #4f46e5;
+    border-color: #4f46e5;
+}

@@ -1,0 +1,127 @@
+.ph-account-option {
+    background: #ffffff;
+    border-radius: 24px;
+    padding: 48px 40px;
+    border: 1px solid rgba(226, 232, 240, 0.8);
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+    transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+}
+
+.ph-account-option:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+    border-color: #bae6fd;
+}
+
+.ph-account-option--highlight {
+    background: #f0fdfa;
+    border-color: #99f6e4;
+}
+
+.ph-account-option__icon-wrapper {
+    width: 64px;
+    height: 64px;
+    background: #f0f9ff;
+    color: #0ea5e9;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 16px;
+    margin-bottom: 32px;
+    transition: all 0.3s ease;
+}
+
+.ph-account-option--highlight .ph-account-option__icon-wrapper {
+    background: #0d9488;
+    color: #ffffff;
+}
+
+.ph-account-option:hover .ph-account-option__icon-wrapper {
+    transform: scale(1.1) rotate(5deg);
+}
+
+.ph-account-option__icon {
+    width: 32px;
+    height: 32px;
+    display: none;
+}
+
+[data-icon-type="savings"] .ph-account-option__icon--savings,
+[data-icon-type="checking"] .ph-account-option__icon--checking,
+[data-icon-type="investment"] .ph-account-option__icon--investment {
+    display: block;
+}
+
+.ph-account-option__title {
+    font-size: 24px;
+    font-weight: 800;
+    color: #0f172a;
+    margin-bottom: 12px;
+    letter-spacing: -0.01em;
+}
+
+.ph-account-option__subtitle {
+    font-size: 16px;
+    line-height: 1.6;
+    color: #475569;
+    margin-bottom: 32px;
+}
+
+.ph-account-option__features {
+    margin-top: auto;
+    padding-top: 24px;
+    border-top: 1px solid #f1f5f9;
+}
+
+.ph-account-option__features-label {
+    font-size: 12px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: #94a3b8;
+    margin-bottom: 20px;
+}
+
+.ph-account-option__features-list {
+    min-height: 40px;
+}
+
+.ph-account-option__footer {
+    margin-top: 40px;
+}
+
+.ph-account-option__button {
+    display: inline-block;
+    width: 100%;
+    padding: 14px 28px;
+    background: #f8fafc;
+    color: #0f172a;
+    border: 1px solid #e2e8f0;
+    border-radius: 12px;
+    font-weight: 600;
+    text-align: center;
+    transition: all 0.2s ease;
+    text-decoration: none;
+}
+
+.ph-account-option__button:hover {
+    background: #0d9488;
+    color: #ffffff;
+    border-color: #0d9488;
+    text-decoration: none;
+}
+
+.ph-account-option--highlight .ph-account-option__button {
+    background: #0d9488;
+    color: #ffffff;
+    border-color: #0d9488;
+}
+
+.ph-account-option--highlight .ph-account-option__button:hover {
+    background: #0f766e;
+    border-color: #0f766e;
+}

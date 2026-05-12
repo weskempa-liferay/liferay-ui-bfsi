@@ -1,26 +1,24 @@
 <div class="pf-cc-option pf-cc-option--${configuration.cardStyle}">
-  <div class="pf-cc-option__icon-wrapper">
-    [#if configuration.iconType == "basic"]
-    <svg class="pf-cc-option__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor">
-      <rect x="2" y="5" width="20" height="14" rx="2" stroke-width="1.5" />
-      <line x1="2" y1="10" x2="22" y2="10" stroke-width="1.5" />
-      <rect x="5" y="14" width="3" height="2" rx="0.5" stroke-width="1.5" />
-    </svg>
-    [#elseif configuration.iconType == "rewards"]
-    <svg class="pf-cc-option__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor">
-      <rect x="2" y="5" width="20" height="14" rx="2" stroke-width="1.5" />
-      <path d="M12 11L13.5 14H16.5L14 16L15 19L12 17L9 19L10 16L7.5 14H10.5L12 11Z" fill="currentColor" opacity="0.2"
-        stroke-width="1.5" />
-      <path d="M12 11L13.5 14H16.5L14 16L15 19L12 17L9 19L10 16L7.5 14H10.5L12 11Z" stroke-width="1.5" />
-    </svg>
-    [#else]
-    <svg class="pf-cc-option__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor">
-      <rect x="2" y="5" width="20" height="14" rx="2" stroke-width="1.5" />
-      <circle cx="12" cy="12" r="3" stroke-width="1.5" />
-      <path d="M12 9V5" stroke-width="1.5" />
-    </svg>
-    [/#if]
-  </div>
+    <div class="pf-cc-option__icon-wrapper">
+      <!-- Basic Icon -->
+      <svg class="pf-cc-option__icon pf-cc-option__icon--basic" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+        <rect x="2" y="5" width="20" height="14" rx="2" stroke-width="1.5" />
+        <line x1="2" y1="10" x2="22" y2="10" stroke-width="1.5" />
+        <rect x="5" y="14" width="3" height="2" rx="0.5" stroke-width="1.5" />
+      </svg>
+      <!-- Rewards Icon -->
+      <svg class="pf-cc-option__icon pf-cc-option__icon--rewards" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+        <rect x="2" y="5" width="20" height="14" rx="2" stroke-width="1.5" />
+        <path d="M12 8L13.5 11H16.5L14 13L15 16L12 14L9 16L10 13L7.5 11H10.5L12 8Z" fill="currentColor" opacity="0.2"
+          stroke-width="1.5" />
+        <path d="M12 8L13.5 11H16.5L14 13L15 16L12 14L9 16L10 13L7.5 11H10.5L12 8Z" stroke-width="1.5" />
+      </svg>
+      <!-- Student Icon -->
+      <svg class="pf-cc-option__icon pf-cc-option__icon--student" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+        <path d="M22 10L12 5L2 10L12 15L22 10Z" />
+        <path d="M6 12V17C6 17 9 20 12 20C15 20 18 17 18 17V12" />
+      </svg>
+    </div>
 
   <h2 class="pf-cc-option__title" data-lfr-editable-id="title" data-lfr-editable-type="text">
     Credit Card Name

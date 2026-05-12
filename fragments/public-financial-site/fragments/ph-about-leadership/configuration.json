@@ -1,0 +1,35 @@
+{
+  "fieldSets": [
+    {
+      "fields": [
+        {
+          "name": "columns",
+          "label": "Columns",
+          "type": "select",
+          "dataType": "string",
+          "defaultValue": "4",
+          "typeOptions": {
+            "validValues": [
+              { "value": "2", "label": "2 Columns" },
+              { "value": "3", "label": "3 Columns" },
+              { "value": "4", "label": "4 Columns" }
+            ]
+          }
+        },
+        {
+          "name": "backgroundColor",
+          "label": "Background Color",
+          "type": "select",
+          "dataType": "string",
+          "defaultValue": "white",
+          "typeOptions": {
+            "validValues": [
+              { "value": "white", "label": "White" },
+              { "value": "gray", "label": "Light Gray" }
+            ]
+          }
+        }
+      ]
+    }
+  ]
+}

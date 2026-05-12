@@ -1,0 +1,22 @@
+{
+  "fieldSets": [
+    {
+      "fields": [
+        {
+          "name": "backgroundColor",
+          "label": "Background Color",
+          "type": "select",
+          "dataType": "string",
+          "defaultValue": "gray",
+          "typeOptions": {
+            "validValues": [
+              { "value": "white", "label": "White" },
+              { "value": "gray", "label": "Light Gray" },
+              { "value": "blue", "label": "Soft Blue" }
+            ]
+          }
+        }
+      ]
+    }
+  ]
+}

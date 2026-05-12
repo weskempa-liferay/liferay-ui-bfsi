@@ -1,0 +1,42 @@
+{
+  "fieldSets": [
+    {
+      "fields": [
+        {
+          "name": "imagePosition",
+          "label": "Image Position",
+          "type": "select",
+          "dataType": "string",
+          "defaultValue": "right",
+          "typeOptions": {
+            "validValues": [
+              { "value": "left", "label": "Left" },
+              { "value": "right", "label": "Right" }
+            ]
+          }
+        },
+        {
+          "name": "backgroundColor",
+          "label": "Background Color",
+          "type": "select",
+          "dataType": "string",
+          "defaultValue": "white",
+          "typeOptions": {
+            "validValues": [
+              { "value": "white", "label": "White" },
+              { "value": "gray", "label": "Light Gray" },
+              { "value": "dark", "label": "Deep Dark" }
+            ]
+          }
+        },
+        {
+          "name": "showAccent",
+          "label": "Show Accent Line",
+          "type": "checkbox",
+          "dataType": "boolean",
+          "defaultValue": true
+        }
+      ]
+    }
+  ]
+}
